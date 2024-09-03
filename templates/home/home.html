@@ -10,11 +10,21 @@
 {% block content %}
 <section>
     <div class="home container">
-        <div class="pictures">
-
-        </div>
-        <div class="main-header">
-            <h1 class="main-phrase">Hike here</h1>
+        <div class="home-page-info">
+            <div class="main-header">
+                <h1 class="main-phrase">Hike here</h1>
+            </div>
+            <div class="pictures">
+                <div class="one-picture">
+                    <img src="{% static 'home/images/isokurupyhatunturi.jpg' %}" alt="isokurupyhatunturi">
+                </div>
+                <div class="one-picture">
+                    <img src="{% static 'home/images/nattanen.jpg' %}" alt="nattanen">
+                </div>
+                <div class="one-picture">
+                    <img src="{% static 'home/images/saana.jpg' %}" alt="saana">
+                </div>
+            </div>
         </div>
     </div>
 </section>

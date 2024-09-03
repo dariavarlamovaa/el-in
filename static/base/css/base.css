@@ -8,8 +8,8 @@ body {
     font-family: 'Barlow', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 15px;
-    color: #211f1f;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #151414;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -23,7 +23,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #211f1f;
+    color: #FFFFFF;
 }
 
 h1, h2, h3, p {
