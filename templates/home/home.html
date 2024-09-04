@@ -9,20 +9,27 @@
 
 {% block content %}
 <section>
-    <div class="home container">
+    <div class="home">
         <div class="home-page-info">
             <div class="main-header">
+                <span class="swiper-button-prev swiper"><img src="{% static 'home/images/left.svg' %}" alt="L"></span>
                 <h1 class="main-phrase">Hike here</h1>
+                <span class="swiper-button-next swiper"><img src="{% static 'home/images/right.svg' %}" alt="R"></span>
             </div>
-            <div class="pictures">
-                <div class="one-picture">
-                    <img src="{% static 'home/images/isokurupyhatunturi.jpg' %}" alt="isokurupyhatunturi">
-                </div>
-                <div class="one-picture">
-                    <img src="{% static 'home/images/nattanen.jpg' %}" alt="nattanen">
-                </div>
-                <div class="one-picture">
-                    <img src="{% static 'home/images/saana.jpg' %}" alt="saana">
+            <div class="all-pictures">
+                <div class="pictures">
+                    <div class="one-picture">
+                        <img src="{% static 'home/images/isokurupyhatunturi.jpg' %}" alt="isokurupyhatunturi">
+                    </div>
+                    <div class="one-picture">
+                        <img src="{% static 'home/images/nattanen.jpg' %}" alt="nattanen">
+                    </div>
+                    <div class="one-picture">
+                        <img src="{% static 'home/images/saana.jpg' %}" alt="saana">
+                    </div>
+                    <div class="one-picture">
+                        <img src="{% static 'home/images/taivalkongas.jpg' %}" alt="taivalkongas">
+                    </div>
                 </div>
             </div>
         </div>
