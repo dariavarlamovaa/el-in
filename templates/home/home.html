@@ -12,9 +12,11 @@
     <div class="home">
         <div class="home-page-info">
             <div class="main-header">
-                <span class="swiper-button-prev swiper"><img src="{% static 'home/images/left.svg' %}" alt="L"></span>
+                <img id="prevBtn" src="{% static 'home/images/left.svg' %}"
+                     alt="L">
                 <h1 class="main-phrase">Hike here</h1>
-                <span class="swiper-button-next swiper"><img src="{% static 'home/images/right.svg' %}" alt="R"></span>
+                <img id="nextBtn" src="{% static 'home/images/right.svg' %}"
+                     alt="R">
             </div>
             <div class="all-pictures">
                 <div class="pictures">
@@ -36,13 +38,15 @@
         <div class="selector container">
             <div class="selector-info">
                 <div class="search-line">
-                    <p class="search-for-hiking-place">Search your hiking place:</p>
+                    <p class="search-for-hiking-place">Find your hiking place :</p>
                     <div class="selector-line">
                         <div class="city select">
                             <span>City</span>
+                            <img src="{% static 'home/images/arrow-top.svg' %}" alt="^">
                         </div>
                         <div class="season select">
                             <span>Season</span>
+                            <img src="{% static 'home/images/arrow-top.svg' %}" alt="^">
                         </div>
                     </div>
                 </div>
@@ -51,3 +55,7 @@
     </div>
 </section>
 {% endblock content %}
+
+{% block script_block %}
+<script src="{% static 'js/scroll.js' %}"></script>
+{% endblock %}

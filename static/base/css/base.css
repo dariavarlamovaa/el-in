@@ -72,7 +72,7 @@ main {
 .menu {
     display: flex;
     gap: 40px;
-    flex: 1;
+    flex: 2;
     text-transform: uppercase;
 }
 
@@ -82,7 +82,7 @@ main {
 }
 
 .language {
-    flex: 1;
+    flex: 2;
     text-align: right;
     text-transform: uppercase;
 
