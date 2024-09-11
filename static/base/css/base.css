@@ -61,6 +61,10 @@ main {
     height: 100%;
 }
 
+.header {
+    text-transform: uppercase;
+}
+
 .header-all-components {
     display: flex;
     flex-direction: row;

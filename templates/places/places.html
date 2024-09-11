@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'places/css/places.css' %}">
+{% endblock %}
+
+{% block title %}Places{% endblock %}
+
+{% block content %}
+<section class="places-block">
+    <div class="places container">
+        <h1 class="places-header header">All places for hiking</h1>
+        <div class="all-places">
+            <div class="one-place">
+                <span class="city"></span>
+                <div class="cities-places">
+                    <ul>
+<!--                        for loop-->
+                        <li class="citi-place">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block script_block %}
+{% endblock %}
