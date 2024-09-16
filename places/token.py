@@ -2,7 +2,7 @@ import json
 import os
 
 import requests
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -50,3 +50,69 @@ def make_api_request(query):
         return response_data
     except Exception as e:
         return JsonResponse(f"Error getting access token: {e}", status=400)
+
+
+def save_data(query, filename):
+    with open(filename, 'w') as f:
+        data = make_api_request(query)
+        json.dump(data, f)
+
+
+def get_cities_data():
+    query = """{
+                product (where: {
+                            _and: [
+                                {type:{_eq:attraction}},
+                                {productTags:{tag:{_eq:"hiking_walking_trekking"}}},
+                                {productTargetGroups:{targetGroupId:{_eq:b2c}}}
+                            ]
+                            }) {
+                    postalAddresses {
+                        city
+                    }
+                    productInformations {
+                        name
+                    }
+                }
+            }"""
+    save_data(query, 'cities.json')
+
+
+def get_all_products_data():
+    query = """ {
+                product (where: {
+                    _and: [
+                        {type:{_eq:attraction}},
+                        {productTags:{tag:{_eq:"hiking_walking_trekking"}}},
+                        {productTargetGroups:{targetGroupId:{_eq:b2c}}},
+                    ]}){
+                    productImages {
+                        filename
+                        altText
+                        largeUrl
+                    }
+                    productInformations {
+                        description
+                        name
+                        url
+                    }
+                    postalAddresses {
+                        location
+                        postalCode
+                        streetName
+                        city
+                    }
+                    productAvailableMonths{
+                        month
+                    }
+                    productPricings {
+                        fromPrice
+                        toPrice
+                    }
+                }
+            }"""
+    save_data(query, 'data.json')
+
+
+get_cities_data()
+get_all_products_data()

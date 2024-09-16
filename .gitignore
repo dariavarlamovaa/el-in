@@ -1,3 +1,6 @@
 /db.sqlite3
 /.env
 /.idea
+/__pycache__
+/places/cities.json
+/places/data.json

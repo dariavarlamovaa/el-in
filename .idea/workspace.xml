@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="added token getter">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -92,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724251434342</updated>
       <workItem from="1724251435509" duration="85000" />
-      <workItem from="1726338303671" duration="1162000" />
+      <workItem from="1726338303671" duration="6566000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -114,7 +124,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$views.coverage" NAME="views Coverage Results" MODIFIED="1726152596655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
-    <SUITE FILE_PATH="coverage/finnhike$token.coverage" NAME="token Coverage Results" MODIFIED="1726234912449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
-    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1726243442865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/finnhike$token.coverage" NAME="token Coverage Results" MODIFIED="1726502839041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
+    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1726494378395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
