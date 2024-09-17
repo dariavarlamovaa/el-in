@@ -112,7 +112,3 @@ def get_all_products_data():
                 }
             }"""
     save_data(query, 'data.json')
-
-
-get_cities_data()
-get_all_products_data()
