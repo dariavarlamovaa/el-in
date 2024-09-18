@@ -112,3 +112,17 @@ def get_all_products_data():
                 }
             }"""
     save_data(query, 'data.json')
+
+
+# clear all data by searching for english and finnish data and deleting another languages data
+
+def save_data_in_table(filename):
+    with open(filename, 'r') as f:
+        data = json.load(f)
+        for item in data['product']:
+            city = item['postalAddresses'][0].get('city')
+            name_english = item['productInformations'][0].get('name')
+            name_finnish = item['productInformations'][1].get('name')
+
+
+save_data_in_table('cities.json')

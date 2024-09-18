@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,8 +81,12 @@ WSGI_APPLICATION = 'finnhike.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': f'{os.getenv("NAME")}',
+        'USER': f'{os.getenv("DATABASE_USER")}',
+        'PASSWORD': f'{os.getenv("PASSWORD")}',
+        'PORT': f'{os.getenv("PORT")}',
+        'HOST': f'{os.getenv("HOST")}',
     }
 }
 
