@@ -58,26 +58,6 @@ def save_data(query, filename):
         json.dump(data, f)
 
 
-def get_cities_data():
-    query = """{
-                product (where: {
-                            _and: [
-                                {type:{_eq:attraction}},
-                                {productTags:{tag:{_eq:"hiking_walking_trekking"}}},
-                                {productTargetGroups:{targetGroupId:{_eq:b2c}}}
-                            ]
-                            }) {
-                    postalAddresses {
-                        city
-                    }
-                    productInformations {
-                        name
-                    }
-                }
-            }"""
-    save_data(query, 'cities.json')
-
-
 def get_all_products_data():
     query = """ {
                 product (where: {
@@ -119,10 +99,51 @@ def get_all_products_data():
 def save_data_in_table(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
-        for item in data['product']:
-            city = item['postalAddresses'][0].get('city')
-            name_english = item['productInformations'][0].get('name')
-            name_finnish = item['productInformations'][1].get('name')
+        for product in data['product']:
+            # image info
+            image_path = product['productImages'][0]['filename']
+            image_alt_text = product['productImages'][0]['altText'].strip() if product['productImages'][0][
+                                                                                   'altText'] is not None else 'Product image'
+            image_url = product['productImages'][0]['largeUrl']
+
+            # product info in english
+            description_eng = product['productInformations'][0]['description']
+            name_eng = product['productInformations'][0]['name']
+            url = product['productInformations'][0]['url'] if product['productInformations'][0]['url'] else \
+                product['productInformations'][1]['url']
+
+            # product info in finnish
+            description_fin = product['productInformations'][1]['description']
+            name_fin = product['productInformations'][1]['name']
+
+            # location info
+            location = product['postalAddresses'][0]['location']
+            postal_code = product['postalAddresses'][0]['postalCode']
+            street_name = product['postalAddresses'][0]['streetName']
+            city = product['postalAddresses'][0]['city']
+
+            # time for visiting info
+            available_time = 'All year' if len(product['productAvailableMonths']) == 12 else ', '.join(
+                [month['month'] for month in product['productAvailableMonths']])
+
+            # price info
+            price = 'Free' if (product['productPricings'][0]['fromPrice'] == 0.0 and product['productPricings'][0][
+                'toPrice'] == 0.0) else f'Paid (€)'
+
+            # print(image_path)
+            # print(image_alt_text)
+            # print(image_url)
+            # print(description_eng)
+            # print(name_eng)
+            # print(url)
+            # print(description_fin)
+            # print(name_fin)
+            # print(location)
+            # print(postal_code)
+            # print(street_name)
+            # print(city)
+            # print(available_time)
+            # print(price)
 
 
-save_data_in_table('cities.json')
+save_data_in_table('data.json')
