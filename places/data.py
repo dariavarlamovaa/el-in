@@ -1,7 +1,10 @@
 import json
 import os
+import psycopg2
+from decimal import Decimal
 
 import requests
+from django.db import connections
 from django.http import JsonResponse
 from dotenv import load_dotenv
 
@@ -96,7 +99,7 @@ def get_all_products_data():
 
 # clear all data by searching for english and finnish data and deleting another languages data
 
-def save_data_in_table(filename):
+def get_data_from_file(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
         for product in data['product']:
@@ -117,33 +120,29 @@ def save_data_in_table(filename):
             name_fin = product['productInformations'][1]['name']
 
             # location info
-            location = product['postalAddresses'][0]['location']
+            location = product['postalAddresses'][0]['location'][1:-1].split(',')
+            latitude = Decimal(location[0])
+            longitude = Decimal(location[1])
             postal_code = product['postalAddresses'][0]['postalCode']
             street_name = product['postalAddresses'][0]['streetName']
             city = product['postalAddresses'][0]['city']
 
             # time for visiting info
-            available_time = 'All year' if len(product['productAvailableMonths']) == 12 else ', '.join(
-                [month['month'] for month in product['productAvailableMonths']])
+            available_time = ', '.join([month['month'] for month in product['productAvailableMonths']])
 
             # price info
             price = 'Free' if (product['productPricings'][0]['fromPrice'] == 0.0 and product['productPricings'][0][
                 'toPrice'] == 0.0) else f'Paid (€)'
 
-            # print(image_path)
-            # print(image_alt_text)
-            # print(image_url)
-            # print(description_eng)
-            # print(name_eng)
-            # print(url)
-            # print(description_fin)
-            # print(name_fin)
-            # print(location)
-            # print(postal_code)
-            # print(street_name)
-            # print(city)
-            # print(available_time)
-            # print(price)
+            insert_data_into_table(image_path, image_alt_text, image_url, description_eng, name_eng, url,
+                                   description_fin, name_fin, latitude, longitude, postal_code, street_name, city,
+                                   available_time, price)
 
 
-save_data_in_table('data.json')
+def insert_data_into_table(*args):
+    cur = connections['postgres'].cursor()
+    cur.execute("INSERT INTO places_place () VALUES (image_path, image_alt_text, image_url, description_eng, name_eng, "
+                "url, description_fin, name_fin, latitude, longitude, postal_code, "
+                "street_name, city, available_time, price)")
+
+get_data_from_file('data.json')
