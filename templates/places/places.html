@@ -13,15 +13,18 @@
         <h1 class="places-header header">All places for hiking</h1>
         <div class="all-places">
             <div class="one-place">
-                <span class="city"></span>
-                <div class="cities-places">
-                    <ul>
-<!--                        for loop-->
-                        <li class="citi-place">
-
-                        </li>
-                    </ul>
-                </div>
+                {% for city, places in cities_and_places.items %}
+                <ul>
+                    <li class="city">
+                        {{ city }}
+                        <ul>
+                            {% for place in places %}
+                            <li>{{ place }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                {% endfor %}
             </div>
         </div>
     </div>
