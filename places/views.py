@@ -158,10 +158,11 @@ class PlaceView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        places_data = Place.objects.values('city', 'name_eng').order_by('city')
+        places_data = Place.objects.values('city', 'name_eng').order_by('city', 'name_eng')
         cities_and_places = defaultdict(list)
         for city in places_data:
             cities_and_places[city['city']].append(city['name_eng'])
+        cities_and_places = dict(cities_and_places)
         context.update({'cities_and_places': cities_and_places})
         return context
 

@@ -4,7 +4,7 @@ from django.db import models
 class Place(models.Model):
     image_path = models.CharField(null=False)
     image_alt_text = models.CharField(null=False, default='product image')
-    image_url = models.CharField(null=True)
+    image_url = models.ImageField(null=True)
     description_eng = models.TextField(null=True)
     name_eng = models.CharField(null=True)
     url = models.CharField(null=True)

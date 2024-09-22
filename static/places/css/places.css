@@ -1,0 +1,35 @@
+.places-header {
+    font-size: 30px;
+}
+
+
+.all-places {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+}
+
+.city-places {
+    display: grid;
+    grid-template-columns: 400px 600px;
+    gap: 100px;
+    border-radius: 10px;
+    background-color: rgb(56, 81, 103);
+    padding: 20px;
+}
+
+
+.city {
+    font-size: 25px;
+}
+
+.ul-places {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.place {
+    font-size: 20px;
+}
