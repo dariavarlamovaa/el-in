@@ -1,35 +1,56 @@
 .places-header {
-    font-size: 30px;
+    font-size: 50px;
+    padding-top: 40px;
+    font-weight: 200;
+    letter-spacing: 10px;
 }
 
 
 .all-places {
     display: flex;
-    flex-direction: column;
     gap: 50px;
     padding-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.city-places-info {
+    width: 30.6%;
 }
 
 .city-places {
-    display: grid;
-    grid-template-columns: 400px 600px;
-    gap: 100px;
-    border-radius: 10px;
-    background-color: rgb(56, 81, 103);
-    padding: 20px;
+    display: flex;
+    align-items: end;
+    gap: 25px;
 }
 
-
-.city {
-    font-size: 25px;
-}
-
-.ul-places {
+.one-place {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.place-image-div {
+    display: flex;
+}
+
+.place-image {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
 .place {
-    font-size: 20px;
+    font-weight: 500;
+}
+
+.city-components {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.city {
+    font-size: 13px;
 }

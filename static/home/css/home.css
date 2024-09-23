@@ -63,7 +63,7 @@
     gap: 50px;
     background-color: #18488f;
     border-radius: 25px;
-    max-width: 600px;
+    max-width: 900px;
     padding: 12px 0;
     margin: 0 auto;
 }
@@ -83,7 +83,31 @@
     display: flex;
     justify-content: center;
     gap: 13px;
+}
+
+.select-hiking-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.select-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.one-selector {
     background-color: #2156a4;
     border-radius: 30px;
-    padding: 5px 0;
+    padding: 7px 0;
+    min-width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }

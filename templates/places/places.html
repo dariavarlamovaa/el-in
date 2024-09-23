@@ -13,14 +13,24 @@
         <h1 class="places-header header">Places</h1>
         <div class="all-places">
             {% for city, places in cities_and_places.items %}
-            <div class="city-places">
-                <span class="city">{{ city }}</span>
-                <ul class="ul-places">
-                    {% for place in places %}
-                    <li class="place">{{ place }}</li>
-                    {% endfor %}
-                </ul>
+            {% for place in places %}
+            <div class="city-places-info">
+                <a href="#">
+                    <div class="city-places">
+                        <div class="place-image-div">
+                            <img class="place-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="">
+                        </div>
+                        <div class="one-place">
+                            <span class="place">{{ place.name_eng }}</span>
+                            <div class="city-components">
+                                <img src="{% static 'places/images/round-pushpin.svg' %}" alt="Round Pushpin">
+                                <span class="city">{{ city }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
+            {% endfor %}
             {% endfor %}
         </div>
     </div>
