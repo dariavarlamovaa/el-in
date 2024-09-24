@@ -11,6 +11,7 @@ from django.db import connections
 from django.http import JsonResponse
 from django.views.generic import TemplateView
 
+from .forms import PlaceSelectorForm
 from .models import Place
 
 load_dotenv()
@@ -163,8 +164,22 @@ class PlaceView(TemplateView):
         for item in places_data:
             cities_and_places[item['city']].append({'name_eng': item['name_eng'], 'image_path': item['image_path']})
         cities_and_places = dict(cities_and_places)
-        context.update({'cities_and_places': cities_and_places})
+        form = PlaceSelectorForm()
+        if form.is_valid():
+            filter_data(self.request)
+        context.update({'cities_and_places': cities_and_places, 'form': form})
         return context
+
+
+def filter_data(request, *args):
+    selected_city = request.GET.get('city_selector', None)
+    selected_month = request.GET.get('month_selector', None)
+    if selected_city:
+        pass
+    if selected_month:
+        pass
+    print(selected_city)
+    print(selected_month)
 
 
 class OneHikingPlaceView(TemplateView):

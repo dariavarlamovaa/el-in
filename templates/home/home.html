@@ -38,28 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="selector container">
-            <div class="selector-info">
-                <div class="search-line">
-                    <p class="search-for-hiking-place header">Find your hiking place :</p>
-                    <div class="city-month select">
-                        <form action="#" class="select-hiking-place" method="get">
-                            <div class="select-place form-parts">
-                                {% csrf_token %}
-                                {% for field in form %}
-                                <div class="one-selector">
-                                    <label>{{ field.label }}</label>
-                                    {{ field }}
-                                </div>
-                                {% endfor %}
-                            </div>
-                            <input class="btn" type="submit" value="ok"/>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        {% include 'base/selector.html' %}
     </div>
 </section>
 {% endblock content %}

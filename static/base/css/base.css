@@ -49,6 +49,20 @@ img {
     cursor: pointer;
 }
 
+select,
+textarea,
+input {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: unset;
+}
+
 .container {
     max-width: 1240px;
     box-sizing: border-box;
@@ -121,4 +135,48 @@ main {
 .footer-designer-name {
     flex: 2;
     text-align: center;
+}
+
+.selector-info {
+    padding-bottom: 50px;
+}
+
+.search-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #18488f;
+    border-radius: 25px;
+    max-width: 640px;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+
+.select-hiking-place {
+    display: flex;
+    gap: 15px;
+}
+
+.selector-one {
+    border: none;
+    box-sizing: border-box;
+    outline-style: none;
+    background-color: #2156a4;
+    border-radius: 25px;
+    padding: 7px 30px;
+    color: #FFFFFF;
+    position: relative;
+    min-width: 155px;
+    font-weight: 200;
+}
+
+.selected-disabled-option {
+    letter-spacing: 10px;
+}
+
+select {
+    text-align-last: center;
+    letter-spacing: 2px;
 }

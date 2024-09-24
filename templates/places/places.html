@@ -10,6 +10,7 @@
 {% block content %}
 <section class="places-block">
     <div class="places container">
+        {% include 'base/selector.html' %}
         <h1 class="places-header header">Places</h1>
         <div class="all-places">
             {% for city, places in cities_and_places.items %}
