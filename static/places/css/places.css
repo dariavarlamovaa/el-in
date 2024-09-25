@@ -1,6 +1,5 @@
 .places-header {
     font-size: 50px;
-    padding-top: 40px;
     font-weight: 200;
     letter-spacing: 10px;
 }
@@ -9,7 +8,7 @@
 .all-places {
     display: flex;
     gap: 50px;
-    padding-top: 50px;
+    padding: 50px 0 100px;
     flex-direction: row;
     flex-wrap: wrap;
 }

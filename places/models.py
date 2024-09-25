@@ -8,7 +8,7 @@ class Place(models.Model):
     description_eng = models.TextField(null=True)
     name_eng = models.CharField(null=True)
     url = models.CharField(null=True)
-    description_fin = models. TextField(null=True)
+    description_fin = models.TextField(null=True)
     name_fin = models.CharField(null=True)
     latitude = models.FloatField(null=False)
     longitude = models.FloatField(null=False)
@@ -17,3 +17,6 @@ class Place(models.Model):
     city = models.CharField(null=False)
     available_time = models.CharField(null=False)
     price = models.CharField(null=False)
+
+    def __str__(self):
+        return self.city

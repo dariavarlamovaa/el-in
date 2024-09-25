@@ -4,15 +4,16 @@ from collections import defaultdict
 
 from decimal import Decimal
 
+from django.shortcuts import render
 from dotenv import load_dotenv
 
 import requests
-from django.db import connections
 from django.http import JsonResponse
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 
 from .forms import PlaceSelectorForm
 from .models import Place
+from .services import get_cities_and_places
 
 load_dotenv()
 
@@ -154,32 +155,37 @@ def insert_data_into_table(image_path, image_alt_text, image_url, description_en
                          street_name=street_name, city=city, available_time=available_time, price=price)
 
 
-class PlaceView(TemplateView):
+class PlaceView(ListView):
+    form = PlaceSelectorForm()
     template_name = 'places/places.html'
+
+    def get_queryset(self):
+        cities_and_places = get_cities_and_places()
+        return cities_and_places
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        places_data = Place.objects.values('city', 'name_eng', 'image_path').order_by('city', 'name_eng')
-        cities_and_places = defaultdict(list)
-        for item in places_data:
-            cities_and_places[item['city']].append({'name_eng': item['name_eng'], 'image_path': item['image_path']})
-        cities_and_places = dict(cities_and_places)
-        form = PlaceSelectorForm()
-        if form.is_valid():
-            filter_data(self.request)
-        context.update({'cities_and_places': cities_and_places, 'form': form})
+        cities_and_places = self.get_queryset()
+        context.update({'cities_and_places': cities_and_places, 'form': self.form})
         return context
 
 
-def filter_data(request, *args):
-    selected_city = request.GET.get('city_selector', None)
-    selected_month = request.GET.get('month_selector', None)
-    if selected_city:
-        pass
-    if selected_month:
-        pass
-    print(selected_city)
-    print(selected_month)
+class PlaceFilter(ListView):
+    template_name = 'places/places.html'
+    form = PlaceSelectorForm()
+
+    def get_queryset(self):
+        selected_city = self.request.GET.get('city_selector', None)
+        selected_month = self.request.GET.get('month_selector', None)
+        cities_and_places = get_cities_and_places(selected_city, selected_month)
+        return cities_and_places
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        cities_and_places = self.get_queryset()
+        print(cities_and_places)
+        context.update({'cities_and_places': cities_and_places, 'form': self.form})
+        return context
 
 
 class OneHikingPlaceView(TemplateView):
