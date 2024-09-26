@@ -5,7 +5,6 @@
             <p class="search-for-hiking-place-header header">Find your hiking place :</p>
             <div class="city-month select">
                 <form action="{% url 'filter-places' %}" class="select-hiking-place" method="get">
-                    {% csrf_token %}
                     <select name="city_selector" id="city_selector"
                             class="month_selector selector-one">
                         <option selected disabled class="selected-disabled-option">CITY</option>

@@ -1,0 +1,23 @@
+<svg width="300" height="300" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M55.7522 9.43998C58.2044 10.6565 60.294 12.4957 61.8117 14.7737L74.8012 34.2943L86.2593 23.3256C88.0102 21.58 90.1503 20.2748 92.5037 19.5173C94.8573 18.7597 97.357 18.5715 99.7973 18.968C102.238 19.3646 104.549 20.3347 106.542 21.7984C108.534 23.2622 110.151 25.1779 111.259 27.3881L132.81 70.4918H7.81241L34.8329 16.4507C36.0569 14.0023 37.9025 11.9184 40.1852 10.4077C42.4678 8.89691 45.1073 8.01234 47.8393 7.84251C50.5714 7.67268 53.3 8.22356 55.7522 9.43998Z"
+          stroke="#598bd4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M210.934 31.2528L179.685 117.19H242.184L210.934 31.2528Z" stroke="#598bd4" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M210.934 117.19V148.439" stroke="#598bd4" stroke-width="5" stroke-linecap="round"
+          stroke-linejoin="round"/>
+    <path d="M39.062 125.002L7.81241 210.937H70.3116L39.062 125.002Z" stroke="#598bd4" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M39.062 210.938V242.188" stroke="#598bd4" stroke-width="5" stroke-linecap="round"
+          stroke-linejoin="round"/>
+    <path d="M139 182C141.5 182.604 144.094 183.135 146.802 183.583C152.135 184.447 157.386 185.757 162.5 187.5"
+          stroke="#598bd4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M109 148C112.365 154.699 116.958 160.705 122.541 165.708" stroke="#598bd4" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M101.562 101.564C101.542 107.652 101.845 113.738 102.468 119.794" stroke="#598bd4" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M186.001 199.558C189.118 203.577 192.488 207.396 196.096 210.998" stroke="#598bd4" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M222 208.545C222 195.818 242 195.818 242 208.546C242 217.636 232.909 215.818 232.909 226.727"
+          stroke="#FDFCFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M232 242.03L232.027 242" stroke="#FDFCFC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

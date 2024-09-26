@@ -1,15 +1,13 @@
 import os
 import json
-from collections import defaultdict
 
 from decimal import Decimal
 
-from django.shortcuts import render
 from dotenv import load_dotenv
 
 import requests
 from django.http import JsonResponse
-from django.views.generic import TemplateView, ListView
+from django.views.generic import ListView, DetailView
 
 from .forms import PlaceSelectorForm
 from .models import Place
@@ -183,10 +181,24 @@ class PlaceFilter(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         cities_and_places = self.get_queryset()
-        print(cities_and_places)
         context.update({'cities_and_places': cities_and_places, 'form': self.form})
         return context
 
 
-class OneHikingPlaceView(TemplateView):
-    pass
+class HikingPlaceView(DetailView):
+    template_name = 'places/place.html'
+    model = Place
+    pk_url_kwarg = 'pk'
+
+    def get_queryset(self):
+        return Place.objects.values(
+            'id', 'image_path', 'image_alt_text', 'description_eng',
+            'name_eng', 'url', 'latitude', 'longitude', 'postal_code',
+            'street_name', 'city', 'available_time', 'price'
+        )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        place = self.get_object()
+        context.update({'place': place})
+        return context

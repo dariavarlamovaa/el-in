@@ -12,11 +12,12 @@
     <div class="places container">
         {% include 'base/selector.html' %}
         <h1 class="places-header header">Places</h1>
+        {% if cities_and_places %}
         <div class="all-places">
             {% for city, places in cities_and_places.items %}
             {% for place in places %}
             <div class="city-places-info">
-                <a href="#">
+                <a href="{% url 'place' place.id %}">
                     <div class="city-places">
                         <div class="place-image-div">
                             <img class="place-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="">
@@ -34,6 +35,18 @@
             {% endfor %}
             {% endfor %}
         </div>
+        {% else %}
+        <div class="no-places-found">
+            <div class="error-messages">
+                <p class="error-message-oops msg">Oops :(</p>
+                <p class="error-message-no-places msg">No places found with these filters</p>
+                <p class="error-message-try-again msg">Come on, try again</p>
+            </div>
+            <div class="error-img">
+                <img src="{% static 'places/images/hiking-place-not-found.svg' %}" alt="Hiking place not found">
+            </div>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock content %}

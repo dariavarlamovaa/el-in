@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'places/css/places.css' %}">
+{% endblock %}
+
+{% block title %}Place{% endblock %}
+{% block content %}
+<section>
+    <div class="one-place-parts">
+        <p>{{ place.city }}</p>
+    </div>
+    <div class="one-place container">
+        <div class="one-place-info">
+
+        </div>
+    </div>
+</section>
+{% endblock %}
