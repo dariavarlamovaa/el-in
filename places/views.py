@@ -200,5 +200,14 @@ class HikingPlaceView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         place = self.get_object()
+
+        best_time_to_visit = place['available_time'].split(', ')
+        if len(best_time_to_visit) == 12:
+            place['available_time'] = 'All year'
+        else:
+            first_month = best_time_to_visit[0][:3].title()
+            last_month = best_time_to_visit[-1][:3].title()
+            place['available_time'] = f'{first_month} - {last_month}'
+
         context.update({'place': place})
         return context

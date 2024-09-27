@@ -2,18 +2,61 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'places/css/places.css' %}">
+<link rel="stylesheet" href="{% static 'places/css/place.css' %}">
 {% endblock %}
 
 {% block title %}Place{% endblock %}
 {% block content %}
-<section>
+<section class="one-place-section">
+    <div class="header-place container">
+        <h1 class="place-header header-category header">Places</h1>
+        <a class="all-places-link" href="{% url 'places' %}">All places</a>
+    </div>
     <div class="one-place-parts">
-        <p>{{ place.city }}</p>
+        <img class="background-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="Place image">
+        <div class="all-parts container">
+            <div class="place-parts-top">
+                <p class="name">{{ place.name_eng }}</p>
+                <div class="share-download">
+                    <a href="#"><img src="{% static 'places/images/share.svg' %}" alt="Share"></a>
+                    <a href="#"><img src="{% static 'places/images/download.svg' %}" alt="Download"></a>
+                </div>
+            </div>
+            <div class="place-part-bottom">
+                <div class="place-image">
+                    <img class="place-image-main" src="{% static 'places/images/' %}{{ place.image_path }}" alt="{{ place.image_alt_text }}">
+                </div>
+                <div class="place-on-map">
+                    <p>Map</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="one-place container">
         <div class="one-place-info">
-
+            <div class="description">
+                <p>{{ place.description_eng }}</p>
+            </div>
+            <div class="place-data">
+                <div class="price-and-available-time">
+                    <div class="price-info">
+                        <img src="" alt="">
+                        <span>{{ place.price }}</span>
+                    </div>
+                    <div class="time-info">
+                        <img src="" alt="">
+                        <span>{{ place.available_time }}</span>
+                    </div>
+                    <div class="address">
+                        <img src="" alt="">
+                        <a target="_blank" href="{{ place.url }}">Place website</a>
+                    </div>
+                    <div class="address">
+                        <img src="" alt="">
+                        <p>{{ place.street_name }}, {{ place.postal_code }}, {{ place.city }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

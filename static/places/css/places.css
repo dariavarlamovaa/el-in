@@ -1,10 +1,3 @@
-.places-header {
-    font-size: 50px;
-    font-weight: 200;
-    letter-spacing: 10px;
-}
-
-
 .all-places {
     display: flex;
     gap: 50px;

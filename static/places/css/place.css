@@ -1,0 +1,63 @@
+.one-place-parts {
+    position: relative;
+    padding-top: 30px;
+}
+
+.header-place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    padding: 25px 0 40px;
+}
+
+.all-places-link {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #CCCCCC;
+}
+
+.background-image {
+    width: 100%;
+    filter: brightness(0.);
+    max-height: 530px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1000;
+    top: 0;
+}
+
+.place-parts-top, .share-download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.place-parts-top {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.name {
+    font-size: 35px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #FFFF00;
+}
+
+.share-download {
+    gap: 30px;
+    padding-left: 50px;
+}
+
+.place-image {
+    width: 800px;
+    height: 500px;
+}
+
+.place-image-main {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}

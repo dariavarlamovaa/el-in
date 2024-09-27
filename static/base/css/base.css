@@ -9,7 +9,7 @@ body {
     font-weight: 300;
     font-size: 15px;
     color: #FFFFFF;
-    background-color: #151414;
+    background-color: #010409;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -77,6 +77,12 @@ main {
 
 .header {
     text-transform: uppercase;
+}
+
+.header-category {
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: 5px;
 }
 
 .header-all-components {
