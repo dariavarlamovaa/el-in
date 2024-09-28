@@ -1,6 +1,6 @@
 .one-place-parts {
     position: relative;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .header-place {
@@ -8,7 +8,7 @@
     flex-direction: row;
     align-items: center;
     gap: 50px;
-    padding: 25px 0 40px;
+    padding: 10px 0 40px;
 }
 
 .all-places-link {
@@ -19,7 +19,7 @@
 
 .background-image {
     width: 100%;
-    filter: brightness(0.);
+    filter: brightness(0.12);
     max-height: 530px;
     object-fit: cover;
     position: absolute;
@@ -41,9 +41,9 @@
 
 .name {
     font-size: 35px;
-    font-weight: 200;
+    font-weight: 500;
     text-transform: uppercase;
-    color: #FFFF00;
+    color: #FAA914;
 }
 
 .share-download {
@@ -51,13 +51,130 @@
     padding-left: 50px;
 }
 
+.place-part-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .place-image {
-    width: 800px;
+    width: 750px;
     height: 500px;
 }
 
-.place-image-main {
+.place-image-main, .map {
     width: 100%;
-    object-fit: cover;
     height: 100%;
+}
+
+.place-image-main {
+    object-fit: cover;
+}
+
+.one-place-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description {
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.extra-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 40px;
+    max-width: 225px;
+}
+
+.price-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.extra-part {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    justify-content: center;
+}
+
+.address, .price-time {
+    border-radius: 25px;
+    border: 1px solid #FAA914;
+}
+
+.extra-part-top {
+    flex-direction: column;
+}
+
+.extra-part:hover {
+    transform: scale(1.05);
+}
+
+.price-time-info {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.price-time-tag {
+    font-size: 10px;
+    color: #CCCCCC;
+}
+
+.extra-part, .external-link a {
+    color: #FFFFFF;
+}
+
+.external-link a:hover {
+    color: #FAA914;
+}
+
+.time-info-parts {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.time-info-parts p {
+    font-size: 20px;
+}
+
+.time-info span {
+    margin-left: 25px;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #FAA914;
+    border-radius: 15px;
+}
+
+.address-text {
+    text-align: center;
+}
+
+.icon-temp {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.temperature {
+    font-size: 30px;
+}
+
+.place-parameter p {
+    font-size: 25px;
 }

@@ -24,10 +24,11 @@
             </div>
             <div class="place-part-bottom">
                 <div class="place-image">
-                    <img class="place-image-main" src="{% static 'places/images/' %}{{ place.image_path }}" alt="{{ place.image_alt_text }}">
+                    <img class="place-image-main" src="{% static 'places/images/' %}{{ place.image_path }}"
+                         alt="{{ place.image_alt_text }}">
                 </div>
                 <div class="place-on-map">
-                    <p>Map</p>
+                    <p class="map">Map</p>
                 </div>
             </div>
         </div>
@@ -35,25 +36,39 @@
     <div class="one-place container">
         <div class="one-place-info">
             <div class="description">
-                <p>{{ place.description_eng }}</p>
+                <p class="description-text">{{ place.description_eng }}</p>
             </div>
-            <div class="place-data">
-                <div class="price-and-available-time">
-                    <div class="price-info">
-                        <img src="" alt="">
-                        <span>{{ place.price }}</span>
+            <div class="extra-info">
+                <div class="price-time">
+                    <div class="price-info extra-part-top extra-part">
+                        <img src="{% static 'places/images/euro.svg' %}" alt="Euro">
+                        <span class="price price-time-info">{{ place.price }}</span>
+                        <span class="price-tag price-time-tag">Price</span>
                     </div>
-                    <div class="time-info">
-                        <img src="" alt="">
-                        <span>{{ place.available_time }}</span>
+                    <div class="external-link extra-part-top extra-part">
+                        <img src="{% static 'places/images/external-link.svg' %}" alt="External link">
+                        <a class="url price-time-info" target="_blank" href="{{ place.url }}">Go</a>
+                        <span class="url-tag price-time-tag">Url</span>
                     </div>
-                    <div class="address">
-                        <img src="" alt="">
-                        <a target="_blank" href="{{ place.url }}">Place website</a>
+                </div>
+                <div class="time-info">
+                    <div class="time-info-parts">
+                        <img src="{% static 'places/images/calendar.svg' %}" alt="Calendar">
+                        <p>Best time to visit</p>
                     </div>
-                    <div class="address">
-                        <img src="" alt="">
-                        <p>{{ place.street_name }}, {{ place.postal_code }}, {{ place.city }}</p>
+                    <span>{{ place.available_time }}</span>
+                </div>
+                <div class="address extra-part">
+                    <img src="{% static 'places/images/location-pin.svg' %}" alt="Location">
+                    <p class="address-text">{{ place.street_name }}, {{ place.postal_code }}, {{ place.city }}</p>
+                </div>
+                <div class="weather">
+                    <div class="icon-temp">
+                        <img src="{{ icon_path }}" alt="{{ weather_parameter}}">
+                        <p class="temperature">{{ temp }}°</p>
+                    </div>
+                    <div class="place-parameter">
+                        <p>{{ place.city }}: {{ weather_parameter }}</p>
                     </div>
                 </div>
             </div>
