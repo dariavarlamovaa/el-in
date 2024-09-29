@@ -36,7 +36,10 @@
     <div class="one-place container">
         <div class="one-place-info">
             <div class="description">
-                <p class="description-text">{{ place.description_eng }}</p>
+                {% for sentence in place.description_eng %}
+                <p class="description-text">{{ sentence }}</p>
+                <br>
+                {% endfor %}
             </div>
             <div class="extra-info">
                 <div class="price-time">
@@ -63,12 +66,17 @@
                     <p class="address-text">{{ place.street_name }}, {{ place.postal_code }}, {{ place.city }}</p>
                 </div>
                 <div class="weather">
-                    <div class="icon-temp">
-                        <img src="{{ icon_path }}" alt="{{ weather_parameter}}">
-                        <p class="temperature">{{ temp }}°</p>
+                    <div class="temp">
+                        <p class="temperature">{{ temp }}°C</p>
                     </div>
-                    <div class="place-parameter">
-                        <p>{{ place.city }}: {{ weather_parameter }}</p>
+                    <div class="city-parameter-icon">
+                        <div class="city-parameter">
+                            <p class="city-weather">{{ place.city }}</p>
+                            <p class="weather-parameter">{{ weather_parameter }}</p>
+                        </div>
+                        <div class="weather-icon">
+                            <img src="{{ icon_path }}" alt="{{ weather_parameter}}">
+                        </div>
                     </div>
                 </div>
             </div>

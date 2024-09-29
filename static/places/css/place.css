@@ -1,6 +1,10 @@
+.one-place {
+    margin-bottom: 100px;
+}
+
 .one-place-parts {
     position: relative;
-    padding: 30px 0;
+    padding: 30px 0 70px;
 }
 
 .header-place {
@@ -43,7 +47,7 @@
     font-size: 35px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #FAA914;
+    color: #009e49;
 }
 
 .share-download {
@@ -89,7 +93,7 @@
     flex-direction: column;
     margin: 0 auto;
     gap: 40px;
-    max-width: 225px;
+    width: 300px;
 }
 
 .price-time {
@@ -107,21 +111,16 @@
     align-items: center;
     gap: 5px;
     box-sizing: border-box;
-    transition: transform 0.3s ease;
     justify-content: center;
 }
 
 .address, .price-time {
     border-radius: 25px;
-    border: 1px solid #FAA914;
+    border: 1px solid #006847;
 }
 
 .extra-part-top {
     flex-direction: column;
-}
-
-.extra-part:hover {
-    transform: scale(1.05);
 }
 
 .price-time-info {
@@ -139,7 +138,7 @@
 }
 
 .external-link a:hover {
-    color: #FAA914;
+    color: #006847;
 }
 
 .time-info-parts {
@@ -157,12 +156,48 @@
     margin-left: 25px;
     padding: 5px 10px;
     text-align: center;
-    background-color: #FAA914;
+    background-color: #006847;
     border-radius: 15px;
 }
 
 .address-text {
     text-align: center;
+}
+
+.weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 75px;
+}
+
+.temp {
+    background-color: #006847;
+    border-top-left-radius: 15px;
+    border-end-start-radius: 15px;
+    padding: 10px 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-parameter {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.city-parameter-icon {
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #006847;
+    border-bottom: 1px solid #006847;
+    border-right: 1px solid #006847;
+    border-start-end-radius: 15px;
+    border-end-end-radius: 15px;
 }
 
 .icon-temp {
@@ -173,8 +208,10 @@
 
 .temperature {
     font-size: 30px;
+    font-weight: 400;
+    text-align: center;
 }
 
-.place-parameter p {
-    font-size: 25px;
+.city-weather {
+    font-size: 17px;
 }

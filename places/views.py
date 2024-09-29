@@ -52,6 +52,7 @@ class HikingPlaceView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         place = self.get_object()
+        print(place['description_eng'])
 
         best_time_to_visit = place['available_time'].split(', ')
         if len(best_time_to_visit) == 12:
@@ -63,8 +64,8 @@ class HikingPlaceView(DetailView):
 
         weather_parameter, temp, icon_path = WeatherAPI.get_current_weather(place['latitude'], place['longitude'])
 
-        # description = [s.strip() for s in place['description_eng'].split('.') if s.strip()]
-        # place['description_eng'] = description
+        description = [s.strip() for s in place['description_eng'].split('\n') if s.strip()]
+        place['description_eng'] = description
 
         context.update({'place': place, 'weather_parameter': weather_parameter, 'temp': temp, 'icon_path': icon_path})
         return context

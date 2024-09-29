@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="added place styles, updated place and places markups, updated value in object result">
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="added icons, added class for getting current weather, modified function based to class based getting and saving data from DataHub, updated place mark up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/places/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/images/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/places/css/place.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/places/css/place.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/places/images/download.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/places/images/download.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/places/images/share.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/places/images/share.svg" afterDir="false" />
@@ -156,7 +157,7 @@
       <workItem from="1724251435509" duration="85000" />
       <workItem from="1726338303671" duration="11160000" />
       <workItem from="1726592204386" duration="14461000" />
-      <workItem from="1726730309031" duration="132697000" />
+      <workItem from="1726730309031" duration="142061000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -222,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727454283331</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added icons, added class for getting current weather, modified function based to class based getting and saving data from DataHub, updated place mark up">
+      <option name="closed" value="true" />
+      <created>1727549713416</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727549713416</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +257,8 @@
     <MESSAGE value="added services for cities and places data, added dunder method to model, updated styles for home and places pages, updated selector" />
     <MESSAGE value="added view for one hiking place, url and markup; updated services, places url" />
     <MESSAGE value="added place styles, updated place and places markups, updated value in object result" />
-    <option name="LAST_COMMIT_MESSAGE" value="added place styles, updated place and places markups, updated value in object result" />
+    <MESSAGE value="added icons, added class for getting current weather, modified function based to class based getting and saving data from DataHub, updated place mark up" />
+    <option name="LAST_COMMIT_MESSAGE" value="added icons, added class for getting current weather, modified function based to class based getting and saving data from DataHub, updated place mark up" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
@@ -258,6 +268,6 @@
     <SUITE FILE_PATH="coverage/finnhike$settings.coverage" NAME="settings Coverage Results" MODIFIED="1726925515828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finnhike" />
     <SUITE FILE_PATH="coverage/finnhike$services.coverage" NAME="services Coverage Results" MODIFIED="1727541456118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
     <SUITE FILE_PATH="coverage/finnhike$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1726926738162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/venv/lib/python3.11/site-packages/django/conf" />
-    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1727548148625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1727591606244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

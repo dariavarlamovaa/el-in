@@ -195,9 +195,9 @@ class WeatherAPI:
         try:
             response = requests.get(url, timeout=3).json()
             weather_parameter = response['weather'][0]['main'].lower()
-            temp = int(response['main']['temp'])
+            temp = round(response['main']['temp'])
             icon = response['weather'][0]['icon']
-            icon_path = f'http://openweathermap.org/img/w/{icon}.png'
+            icon_path = f'https://openweathermap.org/img/wn/{icon}.png'
         except requests.exceptions.RequestException as e:
             return {"error": str(e)}
 
