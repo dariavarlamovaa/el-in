@@ -45,14 +45,13 @@ class HikingPlaceView(DetailView):
     def get_queryset(self):
         return Place.objects.values(
             'id', 'image_path', 'image_alt_text', 'description_eng',
-            'name_eng', 'url', 'latitude', 'longitude', 'postal_code',
+            'name_eng', 'description_fin', 'name_fin', 'url', 'latitude', 'longitude', 'postal_code',
             'street_name', 'city', 'available_time', 'price'
         )
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         place = self.get_object()
-        print(place['description_eng'])
 
         best_time_to_visit = place['available_time'].split(', ')
         if len(best_time_to_visit) == 12:

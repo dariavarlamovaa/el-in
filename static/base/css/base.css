@@ -105,11 +105,50 @@ main {
     text-align: center;
 }
 
-.language {
+.languages {
     flex: 2;
-    text-align: right;
     text-transform: uppercase;
+    position: relative;
+}
 
+.lang-menu {
+    cursor: pointer;
+}
+
+.lang-menu:hover .lang-dropdown {
+    display: block;
+}
+
+.lang-menu:hover .selected_language {
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.selected_language {
+    max-width: 50px;
+    text-align: center;
+    float: right;
+    border-radius: 5px;
+}
+
+.selected_language, .lang-dropdown {
+    border: 1px solid #18488f;
+    padding: 5px 10px;
+    width: 30px;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.selecting-lang {
+    text-align: center;
 }
 
 .logo img {
