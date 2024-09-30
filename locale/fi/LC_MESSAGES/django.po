@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-29 17:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: finnhike/templates/base/base.html.py:17
+#: finnhike/templates/places/places.html.py:15
+#: finnhike/templates/places/place.html.py:13
+msgid "Places"
+msgstr "Paikat"
+
+#: finnhike/templates/base/base.html.py:18
+msgid "Map"
+msgstr "Kartta"
+
+#: finnhike/templates/base/base.html.py:19
+msgid "Hiking Tips"
+msgstr "Retkeilyvinkkejä"
+
+
+#: finnhike/templates/base/base.html.py:51
+msgid "Designed and Developed by Daria V."
+msgstr "Suunnitellut ja kehittänyt Daria V."
+
+#: finnhike/templates/base/selector.html.py:6
+msgid "Find your hiking place :"
+msgstr "Löydä retkeilypaikkasi :"
+
+#: finnhike/templates/base/selector.html.py:11
+msgid "CITY"
+msgstr "KAUPUNKI"
+
+#: finnhike/templates/base/selector.html.py:19
+msgid "MONTH"
+msgstr "KUUKAUSI"
+
+#: finnhike/templates/home/home.html.py:9
+msgid "Home"
+msgstr "Kotisivu"
+
+#: finnhike/templates/home/home.html.py:18
+msgid "Hike here"
+msgstr "Patikoi"
+
+#: finnhike/templates/places/places.html.py:43
+msgid "No places found with these filters"
+msgstr "Näillä suodattimilla ei löytynyt paikkoja"
+
+#: finnhike/templates/places/place.html.py:50
+msgid "Price"
+msgstr "Hinta"
+
+#: finnhike/templates/places/places.html.py:44
+msgid "Come on, try again"
+msgstr "Yritä uudelleen"
+
+#: finnhike/templates/places/place.html.py:61
+msgid "Best time to visit"
+msgstr "Paras aika vierailla"

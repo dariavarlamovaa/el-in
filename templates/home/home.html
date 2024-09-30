@@ -1,11 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
-{% block title %}Home{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
 
 {% block content %}
 <section>
@@ -14,26 +15,37 @@
             <div class="main-header">
                 <img id="prevBtn" class="slide-btn" src="{% static 'home/images/left.svg' %}"
                      alt="L">
-                <h1 class="main-phrase header">Hike here</h1>
+                <h1 class="main-phrase header">{% trans "Hike here" %}</h1>
                 <img id="nextBtn" class="slide-btn" src="{% static 'home/images/right.svg' %}"
                      alt="R">
             </div>
             <div class="all-pictures">
                 <div class="pictures">
                     <div class="one-picture">
-                        <img src="{% static 'home/images/isokurupyhatunturi.jpg' %}" alt="isokurupyhatunturi">
+                        <a href="{% url 'place' 74 %}">
+                            <img src="{% static 'places/images/7bb34290-4eb7-11ec-a95c-cfaccc6e09a0-Kopio tiedostosta Pyha Pictures-9.jpg' %}"
+                                 alt="saana"></a>
                     </div>
                     <div class="one-picture">
-                        <img src="{% static 'home/images/nattanen.jpg' %}" alt="nattanen">
+                        <a href="{% url 'place' 135 %}">
+                            <img src="{% static 'places/images/0216bdd0-6af5-11ed-8b5d-750472ef9a58.jpeg' %}"
+                                 alt="Hiking place"></a>
                     </div>
                     <div class="one-picture">
-                        <img src="{% static 'home/images/saana.jpg' %}" alt="saana">
+                        <a href="{% url 'place' 161 %}">
+                            <img src="{% static 'places/images/f85382e0-94a5-11ec-9e6e-cd72eacf1e96-Pilpasuo (2) muokattu.jpg' %}"
+                                 alt="Hiking place"></a>
                     </div>
                     <div class="one-picture">
-                        <img src="{% static 'home/images/taivalkongas.jpg' %}" alt="taivalkongas">
+                        <a href="{% url 'place' 176 %}">
+                            <img src="{% static 'places/images/39bec870-a9d7-11ec-bed8-b56092421756-original-lapland-everstin-piilo-näköalapolku-pello-juoksenki.jpg' %}"
+                                 alt="Hiking place"></a>
                     </div>
+
                     <div class="one-picture">
-                        <img src="{% static 'home/images/pallas.jpg' %}" alt="pallas">
+                        <a href="{% url 'place' 145 %}">
+                            <img src="{% static 'places/images/8e6f6770-b58b-11ec-86e0-0d834b2f6612.jpeg' %}"
+                                 alt="Hiking place"></a>
                     </div>
                 </div>
             </div>

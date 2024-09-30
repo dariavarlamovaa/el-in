@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -13,25 +14,42 @@
     <div class="header container">
         <div class="header-all-components">
             <div class="menu">
-                <a href="{% url 'places' %}">Places</a>
-                <a href="#">Map</a>
-                <a href="#">Hiking Tips</a>
+                <a href="{% url 'places' %}">{% trans "Places" %}</a>
+                <a href="#">{% trans "Map" %}</a>
+                <a href="#">{% trans "Hiking Tips" %}</a>
             </div>
             <div class="logo">
                 <a href="{% url 'home' %}"><img src="{% static 'base/images/logo.svg' %}"
                                                 alt="logo"></a></div>
             <div class="languages">
+                {% get_current_language as CURRENT_LANGUAGE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
                 <div class="lang-menu">
                     <div class="selected_language">
-                        <p class="lang-text">Eng</p>
+                        {% for lang in languages %}
+                        {% if lang.code == CURRENT_LANGUAGE %}
+                        {{ lang.name | slice:"3" }}
+                        {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="lang-dropdown">
                         <div class="selecting-lang">
-                            <a class="lang-text" href="#">Fin</a>
+                            {% for lang in languages %}
+                            {% if lang.code != CURRENT_LANGUAGE %}
+                            <form action="{% url 'set_language' %}" method="post" id="form_{{ lang.code }}">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.path }}"/>
+                                <input name="language" type="hidden" value="{{ lang.code }}"/>
+                                <a onclick="this.parentNode.submit();">
+                                    {{ lang.name | slice:"3" }}
+                                </a>
+                            </form>
+                            {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -47,7 +65,7 @@
                 <h3>Copyright © 2024</h3>
             </div>
             <div class="footer-designer-name">
-                <h3>Designed and Developed by Daria V.</h3>
+                <h3>{% trans "Designed and Developed by Daria V." %}</h3>
             </div>
             <div class="footer-links">
                 <ul class="footer-icons">

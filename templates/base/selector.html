@@ -1,13 +1,14 @@
 {% load static %}
+{% load i18n %}
 <div class="selector container">
     <div class="selector-info">
         <div class="search-line">
-            <p class="search-for-hiking-place-header header">Find your hiking place :</p>
+            <p class="search-for-hiking-place-header header">{% trans "Find your hiking place :" %}</p>
             <div class="city-month select">
                 <form action="{% url 'filter-places' %}" class="select-hiking-place" method="get">
                     <select name="city_selector" id="city_selector"
                             class="month_selector selector-one">
-                        <option selected disabled class="selected-disabled-option">CITY</option>
+                        <option selected disabled class="selected-disabled-option">{% trans "CITY" %}</option>
                         {% for field in form.city %}
                         {{ field }}
                         {% endfor %}
@@ -15,7 +16,7 @@
 
                     <select type="multichoice" name="month_selector" id="month_selector"
                             class="month_selector selector-one">
-                        <option selected disabled class="selected-disabled-option">MONTH</option>
+                        <option selected disabled class="selected-disabled-option">{% trans "MONTH" %}</option>
                         {% for field in form.month %}
                         {{ field }}
                         {% endfor %}

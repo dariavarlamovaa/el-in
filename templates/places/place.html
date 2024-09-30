@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'places/css/place.css' %}">
@@ -9,14 +10,14 @@
 {% block content %}
 <section class="one-place-section">
     <div class="header-place container">
-        <h1 class="place-header header-category header">Places</h1>
-        <a class="all-places-link" href="{% url 'places' %}">All places</a>
+        <h1 class="place-header header-category header">{% trans "Places" %}</h1>
+        <a class="all-places-link" href="{% url 'places' %}">{% trans "All places" %}</a>
     </div>
     <div class="one-place-parts">
         <img class="background-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="Place image">
         <div class="all-parts container">
             <div class="place-parts-top">
-                <p class="name">{{ place.name_eng }}</p>
+                <p class="name">{{ name }}</p>
                 <div class="share-download">
                     <a href="#"><img src="{% static 'places/images/share.svg' %}" alt="Share"></a>
                     <a href="#"><img src="{% static 'places/images/download.svg' %}" alt="Download"></a>
@@ -36,7 +37,7 @@
     <div class="one-place container">
         <div class="one-place-info">
             <div class="description">
-                {% for sentence in place.description_eng %}
+                {% for sentence in description %}
                 <p class="description-text">{{ sentence }}</p>
                 <br>
                 {% endfor %}
@@ -57,9 +58,9 @@
                 <div class="time-info">
                     <div class="time-info-parts">
                         <img src="{% static 'places/images/calendar.svg' %}" alt="Calendar">
-                        <p>Best time to visit</p>
+                        <p>{% trans "Best time to visit" %}</p>
                     </div>
-                    <span>{{ place.available_time }}</span>
+                    <span>{{ available_time }}</span>
                 </div>
                 <div class="address extra-part">
                     <img src="{% static 'places/images/location-pin.svg' %}" alt="Location">

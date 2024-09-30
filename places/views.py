@@ -43,11 +43,20 @@ class HikingPlaceView(DetailView):
     pk_url_kwarg = 'pk'
 
     def get_queryset(self):
-        return Place.objects.values(
-            'id', 'image_path', 'image_alt_text', 'description_eng',
-            'name_eng', 'description_fin', 'name_fin', 'url', 'latitude', 'longitude', 'postal_code',
-            'street_name', 'city', 'available_time', 'price'
-        )
+        lang = self.request.LANGUAGE_CODE
+        if lang == 'en':
+            return Place.objects.values(
+                'id', 'image_path', 'image_alt_text', 'description_eng',
+                'name_eng', 'url', 'latitude', 'longitude', 'postal_code',
+                'street_name', 'city', 'available_time', 'price'
+            )
+        elif lang == 'fi':
+            return Place.objects.values(
+                'id', 'image_path', 'image_alt_text', 'description_fin', 'name_fin', 'url', 'latitude', 'longitude',
+                'postal_code', 'street_name', 'city', 'available_time', 'price'
+            )
+        else:
+            return {}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -55,16 +64,20 @@ class HikingPlaceView(DetailView):
 
         best_time_to_visit = place['available_time'].split(', ')
         if len(best_time_to_visit) == 12:
-            place['available_time'] = 'All year'
+            available_time = 'All year'
         else:
             first_month = best_time_to_visit[0][:3].title()
             last_month = best_time_to_visit[-1][:3].title()
-            place['available_time'] = f'{first_month} - {last_month}'
+            available_time = f'{first_month} - {last_month}'
 
         weather_parameter, temp, icon_path = WeatherAPI.get_current_weather(place['latitude'], place['longitude'])
 
-        description = [s.strip() for s in place['description_eng'].split('\n') if s.strip()]
-        place['description_eng'] = description
+        lang = self.request.LANGUAGE_CODE
+        name = place['name_eng'] if lang == 'en' else place['name_fin']
+        description = place['description_eng' if lang == 'en' else 'description_fin']
+        description_list = [s.strip() for s in description.split('\n') if s.strip()]
 
-        context.update({'place': place, 'weather_parameter': weather_parameter, 'temp': temp, 'icon_path': icon_path})
+        context.update(
+            {'place': place, 'available_time': available_time, 'weather_parameter': weather_parameter, 'name': name,
+             'description': description_list, 'temp': temp, 'icon_path': icon_path})
         return context

@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'places/css/places.css' %}">
@@ -11,7 +12,7 @@
 <section class="places-block">
     <div class="places container">
         {% include 'base/selector.html' %}
-        <h1 class="places-header header-category header">Places</h1>
+        <h1 class="places-header header-category header">{% trans "Places" %}</h1>
         {% if cities_and_places %}
         <div class="all-places">
             {% for city, places in cities_and_places.items %}
@@ -23,7 +24,7 @@
                             <img class="place-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="">
                         </div>
                         <div class="one-place">
-                            <span class="place">{{ place.name_eng }}</span>
+                            <span class="place">{{ place.name }}</span>
                             <div class="city-components">
                                 <img src="{% static 'places/images/round-pushpin.svg' %}" alt="Round Pushpin">
                                 <span class="city">{{ city }}</span>
@@ -39,8 +40,8 @@
         <div class="no-places-found">
             <div class="error-messages">
                 <p class="error-message-oops msg">Oops :(</p>
-                <p class="error-message-no-places msg">No places found with these filters</p>
-                <p class="error-message-try-again msg">Come on, try again</p>
+                <p class="error-message-no-places msg">{% trans "No places found with these filters" %}</p>
+                <p class="error-message-try-again msg">{% trans "Come on, try again" %}</p>
             </div>
             <div class="error-img">
                 <img src="{% static 'places/images/hiking-place-not-found.svg' %}" alt="Hiking place not found">

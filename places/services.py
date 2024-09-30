@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 
 from django.http import JsonResponse
 from django.db.models import Q
+from django.utils.translation import get_language
 
 from places.models import Place
 
@@ -165,24 +166,33 @@ class DataFromDataHub:
 
 
 def get_cities_and_places(city=None, month=None):
+    lang = get_language()
     filter_data = Q()
     if city:
         filter_data &= Q(city=city)
     if month:
         filter_data &= Q(available_time__icontains=month)
-    places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'name_fin', 'image_path',
-                                                           'available_time').order_by(
-        'city', 'name_eng')
+
+    if lang == 'en':
+        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image_path',
+                                                               'available_time').order_by('city', 'name_eng')
+    elif lang == 'fi':
+        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_fin', 'image_path',
+                                                               'available_time').order_by('city', 'name_fin')
+    else:
+        return {}
     cities_and_places = defaultdict(list)
     for item in places_data:
         cities_and_places[item['city']].append(
-            {'id': item['id'], 'name_eng': item['name_eng'], 'name_fin': item['name_fin'],
-             'image_path': item['image_path'], 'available_time': item['available_time']})
+            {'id': item['id'], 'name': item['name_eng'] if lang == 'en' else item['name_fin'],
+             'image_path': item['image_path'],
+             'available_time': item['available_time']})
     cities_and_places = dict(cities_and_places)
     return cities_and_places
 
 
 class WeatherAPI:
+
     @staticmethod
     def get_api_for_current_weather():
         api_key = os.getenv('WEATHER_API_KEY')
@@ -190,11 +200,13 @@ class WeatherAPI:
 
     @staticmethod
     def get_current_weather(lat, lon):
+        lang = get_language()
         api_key = WeatherAPI.get_api_for_current_weather()
-        url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric'
+        url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&lang={lang}&units=metric'
         try:
             response = requests.get(url, timeout=3).json()
-            weather_parameter = response['weather'][0]['main'].lower()
+            print(response)
+            weather_parameter = response['weather'][0]['description'].lower()
             temp = round(response['main']['temp'])
             icon = response['weather'][0]['icon']
             icon_path = f'https://openweathermap.org/img/wn/{icon}.png'

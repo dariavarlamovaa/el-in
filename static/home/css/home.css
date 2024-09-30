@@ -48,5 +48,6 @@
 .one-picture img {
     width: 400px;
     height: 500px;
-    filter: brightness(0.50);
+    filter: brightness(0.530);
+    object-fit: cover;
 }
