@@ -6,7 +6,14 @@
 <link rel="stylesheet" href="{% static 'places/css/place.css' %}">
 {% endblock %}
 
-{% block title %}{{ place.name_eng }}{% endblock %}
+{% block leaflet %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+{% endblock leaflet %}
+
+{% block title %}{{ name }}{% endblock %}
 {% block content %}
 <section class="one-place-section">
     <div class="header-place container">
@@ -29,7 +36,7 @@
                          alt="{{ place.image_alt_text }}">
                 </div>
                 <div class="place-on-map">
-                    <p class="map">Map</p>
+                    <div id="map" class="map"></div>
                 </div>
             </div>
         </div>
@@ -46,13 +53,17 @@
                 <div class="price-time">
                     <div class="price-info extra-part-top extra-part">
                         <img src="{% static 'places/images/euro.svg' %}" alt="Euro">
-                        <span class="price price-time-info">{{ place.price }}</span>
-                        <span class="price-tag price-time-tag">Price</span>
+                        {% if place.price == 'Free' %}
+                        <span class="price price-time-info">{% trans "Free" %}</span>
+                        {% else %}
+                        <span class="price price-time-info">{% trans "Paid" %}</span>
+                        {% endif %}
+                        <span class="price-tag price-time-tag">{% trans "Price" %}</span>
                     </div>
                     <div class="external-link extra-part-top extra-part">
                         <img src="{% static 'places/images/external-link.svg' %}" alt="External link">
-                        <a class="url price-time-info" target="_blank" href="{{ place.url }}">Go</a>
-                        <span class="url-tag price-time-tag">Url</span>
+                        <a class="url price-time-info" target="_blank" href="{{ place.url }}">{% trans "Go" %}</a>
+                        <span class="url-tag price-time-tag">{% trans "Url" %}</span>
                     </div>
                 </div>
                 <div class="time-info">
@@ -84,4 +95,39 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block script_block %}
+<script>
+    // getting latitude and longitude of the place
+    var latitude = "{{ latitude }}".replace(',', '.')
+    var longitude = "{{ longitude }}".replace(',', '.')
+    var myIcon = L.icon({
+        iconUrl: '../../../static/places/images/round-pushpin.svg',
+        iconSize: [29, 24],
+        popupAnchor: [0, -14]
+    })
+
+    // map init
+    var map = L.map('map').setView([latitude, longitude], 14);
+
+    // osm layer
+
+
+    var Jawg_Dark = L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        minZoom: 0,
+        maxZoom: 22,
+        accessToken: 'SsGvI1cBUlx6m7qrBwvGWFABDoxJ0sVm4qN7oB1eHlDuTgAA1BfDvF05lMuRkQgs'
+    });
+
+    Jawg_Dark.addTo(map)
+
+    var singleMarker = L.marker([latitude, longitude], {icon: myIcon}).addTo(map)
+    var popup = singleMarker.bindPopup("{{ name }}").openPopup()
+
+    popup.addTo(map)
+
+    L.control.scale().addTo(map)
+</script>
 {% endblock %}

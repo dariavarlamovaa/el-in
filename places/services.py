@@ -205,7 +205,6 @@ class WeatherAPI:
         url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&lang={lang}&units=metric'
         try:
             response = requests.get(url, timeout=3).json()
-            print(response)
             weather_parameter = response['weather'][0]['description'].lower()
             temp = round(response['main']['temp'])
             icon = response['weather'][0]['icon']

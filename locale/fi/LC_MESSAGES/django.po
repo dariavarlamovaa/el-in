@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: finnhike/templates/base/base.html.py:17
+#: finnhike/templates/places/places.html.py:9
 #: finnhike/templates/places/places.html.py:15
 #: finnhike/templates/places/place.html.py:13
 msgid "Places"
@@ -31,7 +32,6 @@ msgstr "Kartta"
 #: finnhike/templates/base/base.html.py:19
 msgid "Hiking Tips"
 msgstr "Retkeilyvinkkejä"
-
 
 #: finnhike/templates/base/base.html.py:51
 msgid "Designed and Developed by Daria V."
@@ -61,14 +61,36 @@ msgstr "Patikoi"
 msgid "No places found with these filters"
 msgstr "Näillä suodattimilla ei löytynyt paikkoja"
 
-#: finnhike/templates/places/place.html.py:50
-msgid "Price"
-msgstr "Hinta"
 
 #: finnhike/templates/places/places.html.py:44
 msgid "Come on, try again"
 msgstr "Yritä uudelleen"
 
-#: finnhike/templates/places/place.html.py:61
+#: finnhike/templates/places/place.html.py:14
+msgid "All places"
+msgstr "Kaikki paikat"
+
+#: finnhike/templates/places/place.html.py:50
+msgid "Free"
+msgstr "Ilmainen"
+
+#: finnhike/templates/places/place.html.py:52
+msgid "Paid"
+msgstr "Makullinen"
+
+#: finnhike/templates/places/place.html.py:54
+msgid "Price"
+msgstr "Hinta"
+
+#: finnhike/templates/places/place.html.py:58
+msgid "Go"
+msgstr "Siirry"
+
+#: finnhike/templates/places/place.html.py:59
+msgid "Url"
+msgstr "Linkki"
+
+#: finnhike/templates/places/place.html.py:65
 msgid "Best time to visit"
 msgstr "Paras aika vierailla"
+

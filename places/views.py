@@ -59,25 +59,36 @@ class HikingPlaceView(DetailView):
             return {}
 
     def get_context_data(self, **kwargs):
+        lang = self.request.LANGUAGE_CODE
+
+        months = {'january': 'tammikuu', 'february': 'helmikuu', 'march': 'maaliskuu', 'april': 'huhtikuu',
+                  'may': 'toukokuu', 'june': 'kesäkuu', 'july': 'heinäkuu', 'august': 'elokuu', 'september': 'syyskuu',
+                  'october': 'lokakuu', 'november': 'marraskuu', 'december': 'joulukuu'}
+
         context = super().get_context_data(**kwargs)
         place = self.get_object()
 
         best_time_to_visit = place['available_time'].split(', ')
         if len(best_time_to_visit) == 12:
-            available_time = 'All year'
+            available_time = 'All year' if lang == 'en' else 'Ympäri vuoden'
         else:
-            first_month = best_time_to_visit[0][:3].title()
-            last_month = best_time_to_visit[-1][:3].title()
-            available_time = f'{first_month} - {last_month}'
+            first_month_in_list = best_time_to_visit[0]
+            last_month_in_list = best_time_to_visit[-1]
+            first_month = first_month_in_list if lang == 'en' else months.get(first_month_in_list)
+            last_month = last_month_in_list if lang == 'en' else months.get(last_month_in_list)
+            available_time = f'{first_month.title()} - {last_month.title()}'
 
         weather_parameter, temp, icon_path = WeatherAPI.get_current_weather(place['latitude'], place['longitude'])
 
-        lang = self.request.LANGUAGE_CODE
         name = place['name_eng'] if lang == 'en' else place['name_fin']
         description = place['description_eng' if lang == 'en' else 'description_fin']
         description_list = [s.strip() for s in description.split('\n') if s.strip()]
 
+        latitude = place['latitude']
+        longitude = place['longitude']
+
         context.update(
             {'place': place, 'available_time': available_time, 'weather_parameter': weather_parameter, 'name': name,
-             'description': description_list, 'temp': temp, 'icon_path': icon_path})
+             'description': description_list, 'latitude': latitude, 'longitude': longitude, 'temp': temp,
+             'icon_path': icon_path})
         return context

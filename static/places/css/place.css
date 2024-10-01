@@ -72,6 +72,11 @@
     height: 100%;
 }
 
+#map {
+    height: 500px;
+    width: 400px;
+}
+
 .place-image-main {
     object-fit: cover;
 }
