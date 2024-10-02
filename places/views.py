@@ -92,3 +92,17 @@ class HikingPlaceView(DetailView):
              'description': description_list, 'latitude': latitude, 'longitude': longitude, 'temp': temp,
              'icon_path': icon_path})
         return context
+
+
+class Map(ListView):
+    template_name = 'map/map.html'
+
+    def get_queryset(self):
+        places = Place.objects.values('id', 'image_path', 'name_eng', 'name_fin', 'city')
+        return places
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        places = self.get_queryset()
+        context.update({'places': places})
+        return context

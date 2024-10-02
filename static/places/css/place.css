@@ -23,7 +23,7 @@
 
 .background-image {
     width: 100%;
-    filter: brightness(0.12);
+    filter: brightness(0.2);
     max-height: 530px;
     object-fit: cover;
     position: absolute;
@@ -64,7 +64,7 @@
 
 .place-image {
     width: 750px;
-    height: 500px;
+    height: 600px;
 }
 
 .place-image-main, .map {
@@ -73,7 +73,7 @@
 }
 
 #map {
-    height: 500px;
+    height: 600px;
     width: 400px;
 }
 

@@ -100,20 +100,24 @@
 {% block script_block %}
 <script>
     // getting latitude and longitude of the place
-    var latitude = "{{ latitude }}".replace(',', '.')
-    var longitude = "{{ longitude }}".replace(',', '.')
+    var latitude = parseFloat("{{ latitude }}".replace(',', '.'))
+    var longitude = parseFloat("{{ longitude }}".replace(',', '.'))
     var myIcon = L.icon({
         iconUrl: '../../../static/places/images/round-pushpin.svg',
-        iconSize: [29, 24],
-        popupAnchor: [0, -14]
+        iconSize: [20, 20],
+        iconAnchor: [10, 20],
+        popupAnchor: [0, -20]
     })
 
     // map init
-    var map = L.map('map').setView([latitude, longitude], 14);
+    var map = L.map('map', {attributionControl: false}).setView([65.309345, 26.278694], 5);
 
     // osm layer
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-
+    // Jawg layer
     var Jawg_Dark = L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
         attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         minZoom: 0,
@@ -128,6 +132,5 @@
 
     popup.addTo(map)
 
-    L.control.scale().addTo(map)
 </script>
 {% endblock %}
