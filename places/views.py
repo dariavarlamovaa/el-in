@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView
 
 from .forms import PlaceSelectorForm
 from .models import Place
-from .services import get_cities_and_places, WeatherAPI
+from .services import WeatherAPI, filter_cities_places, get_places_for_main_map
 
 
 class PlaceView(ListView):
@@ -10,7 +10,7 @@ class PlaceView(ListView):
     template_name = 'places/places.html'
 
     def get_queryset(self):
-        cities_and_places = get_cities_and_places()
+        cities_and_places = filter_cities_places()
         return cities_and_places
 
     def get_context_data(self, **kwargs):
@@ -27,7 +27,7 @@ class PlaceFilter(ListView):
     def get_queryset(self):
         selected_city = self.request.GET.get('city_selector', None)
         selected_month = self.request.GET.get('month_selector', None)
-        cities_and_places = get_cities_and_places(selected_city, selected_month)
+        cities_and_places = filter_cities_places(selected_city, selected_month)
         return cities_and_places
 
     def get_context_data(self, **kwargs):
@@ -95,10 +95,10 @@ class HikingPlaceView(DetailView):
 
 
 class Map(ListView):
-    template_name = 'map/map.html'
+    template_name = 'places/map.html'
 
     def get_queryset(self):
-        places = Place.objects.values('id', 'image_path', 'name_eng', 'name_fin', 'city')
+        places = get_places_for_main_map()
         return places
 
     def get_context_data(self, **kwargs):

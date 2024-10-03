@@ -165,14 +165,8 @@ class DataFromDataHub:
                              street_name=street_name, city=city, available_time=available_time, price=price)
 
 
-def get_cities_and_places(city=None, month=None):
+def get_cities_and_places(filter_data=None):
     lang = get_language()
-    filter_data = Q()
-    if city:
-        filter_data &= Q(city=city)
-    if month:
-        filter_data &= Q(available_time__icontains=month)
-
     if lang == 'en':
         places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image_path',
                                                                'available_time').order_by('city', 'name_eng')
@@ -180,7 +174,7 @@ def get_cities_and_places(city=None, month=None):
         places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_fin', 'image_path',
                                                                'available_time').order_by('city', 'name_fin')
     else:
-        return {}
+        places_data = {}
     cities_and_places = defaultdict(list)
     for item in places_data:
         cities_and_places[item['city']].append(
@@ -189,6 +183,15 @@ def get_cities_and_places(city=None, month=None):
              'available_time': item['available_time']})
     cities_and_places = dict(cities_and_places)
     return cities_and_places
+
+
+def filter_cities_places(city=None, month=None):
+    filter_data = Q()
+    if city:
+        filter_data &= Q(city=city)
+    if month:
+        filter_data &= Q(available_time__icontains=month)
+    return get_cities_and_places(filter_data)
 
 
 class WeatherAPI:
@@ -213,3 +216,20 @@ class WeatherAPI:
             return {"error": str(e)}
 
         return weather_parameter, temp, icon_path
+
+
+def get_places_for_main_map():
+    lang = get_language()
+    if lang == 'en':
+        places_data = list(Place.objects.all().values('id', 'city', 'name_eng', 'image_path', 'latitude', 'longitude'))
+    elif lang == 'fi':
+        places_data = list(Place.objects.all().values('id', 'city', 'name_fin', 'image_path', 'latitude', 'longitude'))
+    else:
+        places_data = list({})
+
+    renamed_places_data = []
+    for place in places_data:
+        place['name'] = place.pop('name_eng' if lang == 'en' else 'name_fin')
+        renamed_places_data.append(place)
+
+    return renamed_places_data
