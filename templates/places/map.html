@@ -7,6 +7,9 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 {% endblock leaflet %}
 
 {% block css %}
@@ -45,12 +48,17 @@
     Jawg_Dark.addTo(map)
 
     let places = JSON.parse(document.getElementById("places_json").textContent)
-
+    var markers = new L.MarkerClusterGroup();
     places.forEach(place => {
-        let place_marker = L.marker([place.latitude, place.longitude], {'icon': myIcon}).addTo(map)
-        let context = `<a class="popup-link" href="/places/place/${place.id}"><img class="popup-image" src="../../../static/places/images/${place.image_path}" alt="${place.name}"><p class="popup-name">${place.name}</p><p class="popup-city">${place.city}</p></a>`
-        let popup = place_marker.bindPopup(context)
-        popup.addTo(map)
+        let place_marker = L.marker([place.latitude, place.longitude], {'icon': myIcon})
+        let context = `<a class="popup-link" href="/places/place/${place.id}">
+                        <img class="popup-image" src="../../../static/places/images/${place.image_path}"
+                        alt="${place.name}"><p class="popup-name">${place.name}</p>
+                        <p class="popup-city">${place.city}</p></a>`
+        place_marker.bindPopup(context)
+        markers.addLayer(place_marker);
     })
+    map.addLayer(markers);
+
 </script>
 {% endblock %}

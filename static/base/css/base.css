@@ -9,7 +9,7 @@ body {
     font-weight: 300;
     font-size: 15px;
     color: #FFFFFF;
-    background-color: #010409;
+    background-color: #0e0c06;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -132,7 +132,7 @@ main {
 }
 
 .selected_language, .lang-dropdown {
-    border: 1px solid #18488f;
+    border: 1px solid #585123;
     padding: 5px 10px;
     width: 30px;
 }
@@ -192,7 +192,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #18488f;
+    background-color: #585123;
     border-radius: 25px;
     max-width: 640px;
     padding: 12px 0;
@@ -208,7 +208,7 @@ main {
     border: none;
     box-sizing: border-box;
     outline-style: none;
-    background-color: #2156a4;
+    background-color: #6b622d;
     border-radius: 25px;
     padding: 7px 30px;
     color: #FFFFFF;

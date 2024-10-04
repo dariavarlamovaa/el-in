@@ -47,7 +47,7 @@
     font-size: 35px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #009e49;
+    color: #eec170;
 }
 
 .share-download {
@@ -99,6 +99,10 @@
     margin: 0 auto;
     gap: 40px;
     width: 300px;
+    position: sticky;
+    align-self: flex-start;
+    top: 100px;
+    z-index: 10;
 }
 
 .price-time {
@@ -121,7 +125,7 @@
 
 .address, .price-time {
     border-radius: 25px;
-    border: 1px solid #006847;
+    border: 1px solid #585123;
 }
 
 .extra-part-top {
@@ -143,7 +147,7 @@
 }
 
 .external-link a:hover {
-    color: #006847;
+    color: #585123;
 }
 
 .time-info-parts {
@@ -161,7 +165,7 @@
     margin-left: 25px;
     padding: 5px 10px;
     text-align: center;
-    background-color: #006847;
+    background-color: #585123;
     border-radius: 15px;
 }
 
@@ -177,7 +181,7 @@
 }
 
 .temp {
-    background-color: #006847;
+    background-color: #585123;
     border-top-left-radius: 15px;
     border-end-start-radius: 15px;
     padding: 10px 15px;
@@ -198,9 +202,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border-top: 1px solid #006847;
-    border-bottom: 1px solid #006847;
-    border-right: 1px solid #006847;
+    border-top: 1px solid #585123;
+    border-bottom: 1px solid #585123;
+    border-right: 1px solid #585123;
     border-start-end-radius: 15px;
     border-end-end-radius: 15px;
 }

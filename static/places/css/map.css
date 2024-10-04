@@ -3,10 +3,12 @@
     width: 100%;
 }
 
+
 .leaflet-popup-content-wrapper {
     border-radius: 15px;
     padding: unset;
     box-shadow: unset;
+    overflow: hidden;
 }
 
 .leaflet-popup-content {
@@ -37,4 +39,22 @@
 .popup-city {
     padding: 0 10px 15px 10px;
     color: #3f4041;
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+    background-color: unset;
+}
+
+.marker-cluster-small {
+    background-color: #418755;
+}
+
+.marker-cluster-medium {
+    background-color: #b06145;
+}
+
+.marker-cluster-large {
+    background-color: #ad3d3d;
 }
