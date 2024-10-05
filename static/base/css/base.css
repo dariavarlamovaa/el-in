@@ -86,9 +86,16 @@ main {
 }
 
 .header-all-components {
+    padding: 30px 0 20px;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.menu-lang {
     display: flex;
     flex-direction: row;
-    padding: 20px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -96,17 +103,17 @@ main {
 .menu {
     display: flex;
     gap: 40px;
-    flex: 2;
     text-transform: uppercase;
 }
 
 .logo {
-    flex: 3;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -80%);
     text-align: center;
 }
 
 .languages {
-    flex: 2;
     text-transform: uppercase;
     position: relative;
 }

@@ -1,0 +1,51 @@
+@media screen and (max-width: 1300px) {
+    body {
+        padding: 0 30px;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .menu {
+        display: none;
+        overflow: hidden;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .menu, .languages {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #0e0c06;
+        z-index: 100;
+
+    }
+
+    .menu {
+        border: 1px solid #ccc;
+        flex-direction: column;
+        top: 60px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+
+    .languages {
+        top: 100px;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .show {
+        display: flex;
+    }
+}
+

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/media_base.css' %}">
     <link rel="icon" type="image/x-con" href="{% static 'base/images/favicon.ico' %}">
     {% block leaflet %}{% endblock leaflet %}
     {% block css %}{% endblock %}
@@ -14,43 +15,48 @@
 <header class="header-main">
     <div class="header container">
         <div class="header-all-components">
-            <div class="menu">
-                <a href="{% url 'places' %}">{% trans "Places" %}</a>
-                <a href="{% url 'map' %}">{% trans "Map" %}</a>
-                <a href="#">{% trans "Hiking Tips" %}</a>
+            <div class="menu-lang">
+                <div class="menu" id="menu">
+                    <a href="{% url 'places' %}">{% trans "Places" %}</a>
+                    <a href="{% url 'map' %}">{% trans "Map" %}</a>
+                    <a href="#">{% trans "Hiking Tips" %}</a>
+                </div>
+                <div class="languages">
+                    {% get_current_language as CURRENT_LANGUAGE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    <div class="lang-menu">
+                        <div class="selected_language">
+                            {% for lang in languages %}
+                            {% if lang.code == CURRENT_LANGUAGE %}
+                            {{ lang.name | slice:"3" }}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="lang-dropdown">
+                            <div class="selecting-lang">
+                                {% for lang in languages %}
+                                {% if lang.code != CURRENT_LANGUAGE %}
+                                <form action="{% url 'set_language' %}" method="post" id="form_{{ lang.code }}">
+                                    {% csrf_token %}
+                                    <input name="next" type="hidden" value="{{ request.path }}"/>
+                                    <input name="language" type="hidden" value="{{ lang.code }}"/>
+                                    <a onclick="this.parentNode.submit();">
+                                        {{ lang.name | slice:"3" }}
+                                    </a>
+                                </form>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="logo">
                 <a href="{% url 'home' %}"><img src="{% static 'base/images/logo.svg' %}"
                                                 alt="logo"></a></div>
-            <div class="languages">
-                {% get_current_language as CURRENT_LANGUAGE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                <div class="lang-menu">
-                    <div class="selected_language">
-                        {% for lang in languages %}
-                        {% if lang.code == CURRENT_LANGUAGE %}
-                        {{ lang.name | slice:"3" }}
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-                    <div class="lang-dropdown">
-                        <div class="selecting-lang">
-                            {% for lang in languages %}
-                            {% if lang.code != CURRENT_LANGUAGE %}
-                            <form action="{% url 'set_language' %}" method="post" id="form_{{ lang.code }}">
-                                {% csrf_token %}
-                                <input name="next" type="hidden" value="{{ request.path }}"/>
-                                <input name="language" type="hidden" value="{{ lang.code }}"/>
-                                <a onclick="this.parentNode.submit();">
-                                    {{ lang.name | slice:"3" }}
-                                </a>
-                            </form>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+            <div class="burger-menu" id="burger-menu">
+                <span id="burger-icon">&#9776;</span>
             </div>
         </div>
     </div>
@@ -93,6 +99,7 @@
         </div>
     </div>
 </footer>
+<script src="{% static 'js/burger-menu.js' %}"></script>
 {% block script_block %}
 {% endblock %}
 </body>
