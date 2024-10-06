@@ -1,51 +1,199 @@
 @media screen and (max-width: 1300px) {
-    body {
-        padding: 0 30px;
+    .header-all-components,
+    .developer-info {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 
 @media screen and (max-width: 950px) {
-    .menu {
+    .header-all-components {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .menu-lang {
         display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 35%);
+        flex-direction: column;
+        align-items: start;
+        border: 1px solid #ccc;
+        z-index: 1000000;
+        box-sizing: border-box;
+        width: 93%;
+    }
+
+
+    .full-page {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        background-color: #0e0c06;
         overflow: hidden;
     }
 
-    .logo {
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .selected_language, .lang-dropdown {
+        border: unset;
+        width: unset;
+    }
+
+    .selected_language {
+        border-right: 1px solid #FFFFFF;
+        border-radius: unset;
+    }
+
+    .selected_language, .selecting-lang {
         text-align: left;
+    }
+
+    .logo {
+        position: unset;
+        transform: unset;
+    }
+
+    .menu {
+        display: none;
+        overflow: hidden;
+        gap: 50px;
+        flex-direction: column;
+        padding: 20px;
     }
 
     .menu, .languages {
         display: none;
-        position: absolute;
-        right: 0;
         background-color: #0e0c06;
         z-index: 100;
-
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 21px;
     }
 
-    .menu {
-        border: 1px solid #ccc;
-        flex-direction: column;
-        top: 60px;
-        width: 200px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        padding: 10px;
-    }
 
     .languages {
-        top: 100px;
+        width: 100%;
+        padding: 30px 10px;
+    }
+
+    .lang-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .lang-dropdown {
+        position: unset;
+        display: unset;
     }
 
     .burger-menu {
-        display: block;
+        display: flex;
         cursor: pointer;
         font-size: 24px;
         padding: 10px;
+        float: right;
+        z-index: 50;
+        align-items: center;
+        width: 15px;
+        height: 5px;
+        position: relative;
+    }
+
+    #burger-icon {
+        height: 2px;
+        width: 80%;
+        transform: scale(1);
+        background-color: #FFFFFF;
+    }
+
+    .burger-menu:before, .burger-menu:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 70%;
+        background-color: #FFFFFF;
+        transition: all 0.5s ease 0s;
+    }
+
+    .burger-menu:before {
+        top: 0;
+    }
+
+    .burger-menu:after {
+        bottom: 0;
+    }
+
+    .burger-menu.active #burger-icon {
+        transform: scale(0);
+    }
+
+    .burger-menu.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    .burger-menu.active:after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
     }
 
     .show {
+        transition: all 0.3s ease;
         display: flex;
+    }
+
+    .selector {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
+@media screen and (max-width: 690px) {
+    .selector-info {
+        padding: 20px 0 40px;
+    }
+
+    .search-line {
+        flex-direction: column;
+        max-width: 415px;
+        gap: 10px;
+        background-color: unset;
+    }
+
+    .city-month {
+        background-color: #585123;
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .developer-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .search-line {
+        border: #585123;
+    }
+
+    .city-month {
+        background-color: unset;
+    }
+
+    .select-hiking-place {
+        flex-direction: column;
+    }
+}
