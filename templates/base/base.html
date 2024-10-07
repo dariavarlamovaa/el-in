@@ -19,7 +19,7 @@
                 <div class="menu" id="menu">
                     <a href="{% url 'places' %}">{% trans "Places" %}</a>
                     <a href="{% url 'map' %}">{% trans "Map" %}</a>
-                    <a href="#">{% trans "Hiking Tips" %}</a>
+                    <a href="{% url 'hiking-tips' %}">{% trans "Hiking Tips" %}</a>
                 </div>
                 <div class="languages">
                     {% get_current_language as CURRENT_LANGUAGE %}

@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'places/css/hiking_tips.css' %}">
+<link rel="stylesheet" href="{% static 'places/css/media_hiking_tips.css' %}">
+{% endblock %}
+
+{% block title %}{% trans 'Hiking tips' %}{% endblock %}
+{% block content %}
+<section class="hiking-tips-section">
+    <div class="hiking-tips container">
+        <div class="all-tips">
+            <h1 class="header-hiking-tips header-h1">{% trans 'Hiking Tips in Finland' %}</h1>
+            <div class="tips-category">
+                <h2>{% trans 'Weather & Clothing' %}</h2>
+                <div class="tip">
+                    <h3>{% trans '1. Layer Your Clothing' %}</h3>
+                    <p>{% trans 'The weather in Finland can change quickly, so it’s best to wear layers. Merino wool and a waterproof jacket are ideal.' %}</p>
+                </div>
+                <div class="tip">
+                    <h3>{% trans '2. Waterproof Footwear' %}</h3>
+                    <p>{% trans 'Trails can get wet and muddy, so waterproof boots will keep your feet dry and comfortable.' %}</p>
+                </div>
+            </div>
+            <div class="tips-category">
+                <h2>{% trans 'Safety & Navigation' %}</h2>
+                <div class="tip">
+                    <h3>{% trans '1. Use Offline Maps' %}</h3>
+                    <p>{% trans 'Mobile reception can be unreliable in remote areas. Download offline maps to ensure you stay on the right track.' %}</p>
+                </div>
+                <div class="tip">
+                    <h3>{% trans '2. Carry a Compass' %}</h3>
+                    <p>{% trans 'In addition to maps, bring a compass, especially if you’re hiking in more isolated parts of Finland.' %}</p>
+                </div>
+            </div>
+            <div class="tips-category">
+                <h2>{% trans 'Respecting Nature' %}</h2>
+                <div class="tip">
+                    <h3>{% trans '1. Everyman’s Right' %}</h3>
+                    <p>{% trans 'You have the right to roam in Finland, but it’s important to respect nature by leaving no trace and avoiding littering.' %}</p>
+                </div>
+                <div class="tip">
+                    <h3>{% trans '2. Wildlife Awareness' %}</h3>
+                    <p>{% trans 'Be mindful of local wildlife, especially in national parks. Keep a safe distance and avoid feeding animals.' %}</p>
+                </div>
+            </div>
+            <div class="tips-category">
+                <h2>{% trans 'Essentials to Bring' %}</h2>
+                <div class="tip">
+                    <h3>{% trans '1. Snacks & Water' %}</h3>
+                    <p>{% trans 'Carry enough food and water for your hike, especially if you’re in a remote area with no facilities.' %}</p>
+                </div>
+                <div class="tip">
+                    <h3>{% trans '2. First-Aid Kit' %}</h3>
+                    <p>{% trans 'A basic first-aid kit is essential for treating minor injuries or discomforts while hiking.' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

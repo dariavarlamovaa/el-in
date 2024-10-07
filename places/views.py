@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 
 from .forms import PlaceSelectorForm
 from .models import Place
@@ -106,3 +106,8 @@ class Map(ListView):
         places = self.get_queryset()
         context.update({'places': places})
         return context
+
+
+class HikingTip(TemplateView):
+    template_name = 'places/hiking_tips.html'
+

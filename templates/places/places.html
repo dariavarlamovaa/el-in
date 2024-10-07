@@ -4,6 +4,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'places/css/places.css' %}">
+<link rel="stylesheet" href="{% static 'places/css/media_places.css' %}">
 {% endblock %}
 
 {% block title %}{% trans "Places" %}{% endblock %}
@@ -12,7 +13,7 @@
 <section class="places-block">
     <div class="places container">
         {% include 'base/selector.html' %}
-        <h1 class="places-header header-category header">{% trans "Places" %}</h1>
+        <h1 class="places-header header-category header-h1">{% trans "Places" %}</h1>
         {% if cities_and_places %}
         <div class="all-places">
             {% for city, places in cities_and_places.items %}

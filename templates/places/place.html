@@ -4,6 +4,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'places/css/place.css' %}">
+<link rel="stylesheet" href="{% static 'places/css/media_place.css' %}">
 {% endblock %}
 
 {% block leaflet %}
@@ -17,7 +18,7 @@
 {% block content %}
 <section class="one-place-section">
     <div class="header-place container">
-        <h1 class="place-header header-category header">{% trans "Places" %}</h1>
+        <h1 class="place-header header-category header-h1">{% trans "Places" %}</h1>
         <a class="all-places-link" href="{% url 'places' %}">{% trans "All places" %}</a>
     </div>
     <div class="one-place-parts">
@@ -106,7 +107,7 @@
     })
 
     // map init
-    var map = L.map('map', {attributionControl: false}).setView([65.309345, 26.278694], 5);
+    var map = L.map('map', {attributionControl: false}).setView([latitude, longitude], 5);
 
     // osm layer
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

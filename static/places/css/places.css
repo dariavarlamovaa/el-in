@@ -1,13 +1,8 @@
 .all-places {
-    display: flex;
+    display: grid;
     gap: 50px;
     padding: 50px 0 100px;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.city-places-info {
-    width: 30.6%;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .city-places {
@@ -34,7 +29,7 @@
 }
 
 .place {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .city-components {

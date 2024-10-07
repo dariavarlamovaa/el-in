@@ -1,3 +1,7 @@
+.full-map {
+    padding: 40px 10px;
+}
+
 #map {
     height: 660px;
     width: 100%;

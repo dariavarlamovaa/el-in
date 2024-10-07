@@ -65,6 +65,7 @@ button {
 
 .container {
     max-width: 1240px;
+    min-width: 280px;
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
@@ -75,7 +76,8 @@ main {
     height: 100%;
 }
 
-.header {
+.header,
+.header-h1 {
     text-transform: uppercase;
 }
 
@@ -86,7 +88,7 @@ main {
 }
 
 .header-all-components {
-    padding: 30px 0 0;
+    padding: 30px 0 30px;
     position: relative;
 }
 

@@ -11,6 +11,9 @@
 }
 
 @media screen and (max-width: 880px) {
+    .home-page-info {
+        padding: 20px 0 30px;
+    }
     .main-phrase {
         font-size: 4rem;
     }
@@ -30,3 +33,13 @@
     }
 }
 
+
+@media screen and (max-width: 350px) {
+    .one-picture img {
+        width: 250px;
+    }
+
+    .main-phrase {
+        font-size: 3rem;
+    }
+}

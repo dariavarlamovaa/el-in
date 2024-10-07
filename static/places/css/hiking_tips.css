@@ -1,0 +1,43 @@
+.hiking-tips {
+    max-width: 1000px;
+}
+
+.all-tips {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #002F6C;
+    margin-bottom: 40px;
+}
+
+.tips-category {
+    margin-bottom: 30px;
+}
+
+.tips-category h2 {
+    font-size: 1.75rem;
+    color: #002F6C;
+    border-left: 4px solid #002F6C;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.tip {
+    margin-bottom: 20px;
+}
+
+.tip h3 {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.tip p {
+    color: #666;
+    line-height: 1.6;
+}
