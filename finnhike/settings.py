@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$(xp(@8bm^p2+h94sw9+v%7g*7)@c+=y1v^=ahy5#0s^0sv-u$'
+SECRET_KEY = os.getenv("SECRET_KEY_APP")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'finnhike.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': f'{os.getenv("NAME")}',
-        'USER': f'{os.getenv("DATABASE_USER")}',
-        'PASSWORD': f'{os.getenv("PASSWORD")}',
-        'PORT': f'{os.getenv("PORT")}',
-        'HOST': f'{os.getenv("HOST")}',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': f'{os.getenv("POSTGRES_NAME")}',
+        'USER': f'{os.getenv("POSTGRES_USER")}',
+        'PASSWORD': f'{os.getenv("POSTGRES_PASSWORD")}',
+        'PORT': f'{os.getenv("POSTGRES_PORT")}',
+        'HOST': f'{os.getenv("POSTGRES_HOST")}',
     }
 }
 

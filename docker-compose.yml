@@ -1,0 +1,27 @@
+services:
+  finnhike_db:
+    image: postgres
+    container_name: finnhike_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_NAME}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  finnhike_web:
+    image: finnhike_app:latest
+    container_name: finnhike_app
+    depends_on:
+      - finnhike_db
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+
+volumes:
+  postgres_data:
