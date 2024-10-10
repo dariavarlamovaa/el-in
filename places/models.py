@@ -25,8 +25,4 @@ class Place(models.Model):
         return self.name_eng or self.name_fin
 
     def __str__(self):
-        """Возвращаем название места"""
-        return self.get_available_name() or 'Unnamed Place'
-
-    def __str__(self):
         return self.city

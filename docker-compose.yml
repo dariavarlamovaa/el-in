@@ -1,27 +1,36 @@
 services:
   finnhike_web:
     build: .
-    container_name: finnhike_app
+    container_name: finnhike_web
     volumes:
-      - ./data:/code
+      - .:/app
     ports:
       - "8000:8000"
     depends_on:
       - finnhike_db
-    restart: always
+    networks:
+      - finnhike_network
+    command: python manage.py runserver 0.0.0.0:8000
 
   finnhike_db:
     image: postgres
     container_name: finnhike_db
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
     environment:
       - POSTGRES_DB=${POSTGRES_NAME}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-    ports:
-      - "5432:5432"
+    networks:
+      - finnhike_network
+
 
 
 volumes:
   postgres_data:
+
+networks:
+  finnhike_network:
+    driver: bridge
