@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Place(models.Model):
-    image_path = models.ImageField(upload_to='places/images/', null=False)
-    image_alt_text = models.CharField(null=False, default='product image')
-    image_url = models.URLField(null=True)
+    image = models.ImageField(upload_to='places/', null=False, max_length=1000)
+    image_alt_text = models.CharField(null=False, default='product image', max_length=1000)
+    image_url = models.URLField(null=True, max_length=1000)
     description_eng = models.TextField(null=True)
     name_eng = models.CharField(null=True)
     url = models.CharField(null=True)

@@ -22,14 +22,14 @@
         <a class="all-places-link" href="{% url 'places' %}">{% trans "All places" %}</a>
     </div>
     <div class="one-place-parts">
-        <img class="background-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="Place image">
+        <img class="background-image" src="{{ image }}" alt="{{ place.image_alt_text }}">
         <div class="all-parts container">
             <div class="place-parts-top">
                 <p class="name">{{ name }}</p>
             </div>
             <div class="place-part-bottom">
                 <div class="place-image">
-                    <img class="place-image-main" src="{% static 'places/images/' %}{{ place.image_path }}"
+                    <img class="place-image-main" src="{{ image }}"
                          alt="{{ place.image_alt_text }}">
                 </div>
                 <div class="place-on-map">

@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'finnhike.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': f'{os.getenv("POSTGRES_ENGINE")}',
         'NAME': f'{os.getenv("POSTGRES_NAME")}',
         'USER': f'{os.getenv("POSTGRES_USER")}',
         'PASSWORD': f'{os.getenv("POSTGRES_PASSWORD")}',
@@ -141,6 +141,12 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field

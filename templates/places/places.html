@@ -22,7 +22,7 @@
                 <a href="{% url 'place' place.id %}">
                     <div class="city-places">
                         <div class="place-image-div">
-                            <img class="place-image" src="{% static 'places/images/' %}{{ place.image_path }}" alt="">
+                            <img class="place-image" src="{{ place.image }}" alt="">
                         </div>
                         <div class="one-place">
                             <span class="place">{{ place.name }}</span>

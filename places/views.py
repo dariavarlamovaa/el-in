@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, TemplateView
 
+from finnhike import settings
 from .forms import PlaceSelectorForm
 from .models import Place
 from .services import WeatherAPI, filter_cities_places, get_places_for_main_map
@@ -46,13 +47,13 @@ class HikingPlaceView(DetailView):
         lang = self.request.LANGUAGE_CODE
         if lang == 'en':
             return Place.objects.values(
-                'id', 'image_path', 'image_alt_text', 'description_eng',
+                'id', 'image', 'image_alt_text', 'description_eng',
                 'name_eng', 'url', 'latitude', 'longitude', 'postal_code',
                 'street_name', 'city', 'available_time', 'price'
             )
         elif lang == 'fi':
             return Place.objects.values(
-                'id', 'image_path', 'image_alt_text', 'description_fin', 'name_fin', 'url', 'latitude', 'longitude',
+                'id', 'image', 'image_alt_text', 'description_fin', 'name_fin', 'url', 'latitude', 'longitude',
                 'postal_code', 'street_name', 'city', 'available_time', 'price'
             )
         else:
@@ -80,6 +81,7 @@ class HikingPlaceView(DetailView):
 
         weather_parameter, temp, icon_path = WeatherAPI.get_current_weather(place['latitude'], place['longitude'])
 
+        image = f"{settings.MEDIA_URL}{place['image']}"
         name = place['name_eng'] if lang == 'en' else place['name_fin']
         description = place['description_eng' if lang == 'en' else 'description_fin']
         description_list = [s.strip() for s in description.split('\n') if s.strip()]
@@ -88,7 +90,8 @@ class HikingPlaceView(DetailView):
         longitude = place['longitude']
 
         context.update(
-            {'place': place, 'available_time': available_time, 'weather_parameter': weather_parameter, 'name': name,
+            {'place': place, 'image': image, 'available_time': available_time, 'weather_parameter': weather_parameter,
+             'name': name,
              'description': description_list, 'latitude': latitude, 'longitude': longitude, 'temp': temp,
              'icon_path': icon_path})
         return context
@@ -110,4 +113,3 @@ class Map(ListView):
 
 class HikingTip(TemplateView):
     template_name = 'places/hiking_tips.html'
-

@@ -1,16 +1,25 @@
-FROM python:3.11.1-slim-bullseye
+FROM python:3.12.7-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-WORKDIR /finnhike
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    python3-dev \
+    netcat-openbsd \
+    postgresql-client
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc postgresql-client
 
-COPY ./requirements.txt .
+WORKDIR /app/
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+COPY requirements.txt .
+
+RUN python -m pip install --upgrade pip --no-warn-script-location
+
+RUN pip install -r requirements.txt --no-cache-dir --no-warn-script-location
 
 COPY . .
+
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]

@@ -5,12 +5,14 @@ import requests
 from decimal import Decimal
 from collections import defaultdict
 
+from django.core.files.base import ContentFile
 from dotenv import load_dotenv
 
 from django.http import JsonResponse
 from django.db.models import Q
 from django.utils.translation import get_language
 
+from finnhike import settings
 from places.models import Place
 
 load_dotenv()
@@ -116,62 +118,85 @@ class DataHubAPI:
 # clear all data by searching for english and finnish data and deleting another languages data
 class DataFromDataHub:
     def get_data_from_file(self, filename):
-        with open(filename, 'r') as f:
-            data = json.load(f)
-            for product in data['product']:
-                # image info
-                image_path = product['productImages'][0]['filename']
-                image_alt_text = product['productImages'][0]['altText'].strip() if product['productImages'][0][
-                                                                                       'altText'] is not None else 'Product image'
-                image_url = product['productImages'][0]['largeUrl']
+        if Place.objects.exists():
+            print("Data has already been loaded. Aborting import.")
+            return
+        else:
+            with open(filename, 'r') as f:
+                data = json.load(f)
+                for product in data['product']:
+                    # image info
+                    image_path = product['productImages'][0]['filename']
+                    image_alt_text = product['productImages'][0]['altText'].strip() if product['productImages'][0][
+                                                                                           'altText'] is not None else 'Product image'
+                    image_url = product['productImages'][0]['largeUrl']
 
-                # product info in english
-                description_eng = product['productInformations'][0]['description']
-                name_eng = product['productInformations'][0]['name']
-                url = product['productInformations'][0]['url'] if product['productInformations'][0]['url'] else \
-                    product['productInformations'][1]['url']
+                    # product info in english
+                    description_eng = product['productInformations'][0]['description']
+                    name_eng = product['productInformations'][0]['name']
+                    url = product['productInformations'][0]['url'] if product['productInformations'][0]['url'] else \
+                        product['productInformations'][1]['url']
 
-                # product info in finnish
-                description_fin = product['productInformations'][1]['description']
-                name_fin = product['productInformations'][1]['name']
+                    # product info in finnish
+                    description_fin = product['productInformations'][1]['description']
+                    name_fin = product['productInformations'][1]['name']
 
-                # location info
-                location = product['postalAddresses'][0]['location'][1:-1].split(',')
-                latitude = Decimal(location[0])
-                longitude = Decimal(location[1])
-                postal_code = product['postalAddresses'][0]['postalCode']
-                street_name = product['postalAddresses'][0]['streetName']
-                city = product['postalAddresses'][0]['city']
+                    # location info
+                    location = product['postalAddresses'][0]['location'][1:-1].split(',')
+                    latitude = Decimal(location[0])
+                    longitude = Decimal(location[1])
+                    postal_code = product['postalAddresses'][0]['postalCode']
+                    street_name = product['postalAddresses'][0]['streetName']
+                    city = product['postalAddresses'][0]['city']
 
-                # time for visiting info
-                available_time = ', '.join([month['month'] for month in product['productAvailableMonths']])
+                    # time for visiting info
+                    available_time = ', '.join([month['month'] for month in product['productAvailableMonths']])
 
-                # price info
-                price = 'Free' if (product['productPricings'][0]['fromPrice'] == 0.0 and product['productPricings'][0][
-                    'toPrice'] == 0.0) else f'Paid'
+                    # price info
+                    price = 'Free' if (
+                            product['productPricings'][0]['fromPrice'] == 0.0 and product['productPricings'][0][
+                        'toPrice'] == 0.0) else f'Paid'
 
-                self.insert_data_into_table(image_path, image_alt_text, image_url, description_eng, name_eng, url,
-                                            description_fin, name_fin, latitude, longitude, postal_code, street_name,
-                                            city, available_time, price)
+                    self.insert_data_into_table(image_path, image_alt_text, image_url, description_eng, name_eng, url,
+                                                description_fin, name_fin, latitude, longitude, postal_code,
+                                                street_name,
+                                                city, available_time, price)
 
     @staticmethod
     def insert_data_into_table(image_path, image_alt_text, image_url, description_eng, name_eng, url,
                                description_fin, name_fin, latitude, longitude, postal_code, street_name, city,
                                available_time, price):
-        Place.objects.create(image_path=image_path, image_alt_text=image_alt_text, image_url=image_url,
-                             description_eng=description_eng, name_eng=name_eng, url=url,
-                             description_fin=description_fin,
-                             name_fin=name_fin, latitude=latitude, longitude=longitude, postal_code=postal_code,
-                             street_name=street_name, city=city, available_time=available_time, price=price)
+        response = requests.get(image_url)
+
+        if response.status_code == 200:
+            place = Place(
+                image_alt_text=image_alt_text,
+                image_url=image_url,
+                description_eng=description_eng,
+                name_eng=name_eng,
+                url=url,
+                description_fin=description_fin,
+                name_fin=name_fin,
+                latitude=latitude,
+                longitude=longitude,
+                postal_code=postal_code,
+                street_name=street_name,
+                city=city,
+                available_time=available_time,
+                price=price
+            )
+
+            image_name = image_path
+            place.image.save(image_name, ContentFile(response.content), save=True)
 
 
 def get_cities_and_places(filter_data=None):
     lang = get_language()
     if lang == 'en':
-        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image_path',
+        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image',
                                                                'available_time').order_by('city', 'name_eng')
     elif lang == 'fi':
-        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_fin', 'image_path',
+        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_fin', 'image',
                                                                'available_time').order_by('city', 'name_fin')
     else:
         places_data = {}
@@ -179,7 +204,7 @@ def get_cities_and_places(filter_data=None):
     for item in places_data:
         cities_and_places[item['city']].append(
             {'id': item['id'], 'name': item['name_eng'] if lang == 'en' else item['name_fin'],
-             'image_path': item['image_path'],
+             'image': f"{settings.MEDIA_URL}{item['image']}",
              'available_time': item['available_time']})
     cities_and_places = dict(cities_and_places)
     return cities_and_places
@@ -221,14 +246,15 @@ class WeatherAPI:
 def get_places_for_main_map():
     lang = get_language()
     if lang == 'en':
-        places_data = list(Place.objects.all().values('id', 'city', 'name_eng', 'image_path', 'latitude', 'longitude'))
+        places_data = list(Place.objects.all().values('id', 'city', 'name_eng', 'image', 'latitude', 'longitude'))
     elif lang == 'fi':
-        places_data = list(Place.objects.all().values('id', 'city', 'name_fin', 'image_path', 'latitude', 'longitude'))
+        places_data = list(Place.objects.all().values('id', 'city', 'name_fin', 'image', 'latitude', 'longitude'))
     else:
         places_data = list({})
 
     renamed_places_data = []
     for place in places_data:
+        place['image'] = f"{settings.MEDIA_URL}{place['image']}"
         place['name'] = place.pop('name_eng' if lang == 'en' else 'name_fin')
         renamed_places_data.append(place)
 
