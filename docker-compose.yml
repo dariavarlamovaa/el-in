@@ -23,6 +23,7 @@ services:
       - 8000:8000
     links:
       - db
+    restart: always
 
 volumes:
   postgres_data: {}

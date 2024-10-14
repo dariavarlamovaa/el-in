@@ -52,7 +52,7 @@
     places.forEach(place => {
         let place_marker = L.marker([place.latitude, place.longitude], {'icon': myIcon})
         let context = `<a class="popup-link" href="/places/place/${place.id}">
-                        <img class="popup-image" src="../../../static/places/images/${place.image_path}"
+                        <img class="popup-image" src="${place.image}"
                         alt="${place.name}"><p class="popup-name">${place.name}</p>
                         <p class="popup-city">${place.city}</p></a>`
         place_marker.bindPopup(context)
