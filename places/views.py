@@ -60,13 +60,14 @@ class HikingPlaceView(DetailView):
             return {}
 
     def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
         lang = self.request.LANGUAGE_CODE
 
         months = {'january': 'tammikuu', 'february': 'helmikuu', 'march': 'maaliskuu', 'april': 'huhtikuu',
                   'may': 'toukokuu', 'june': 'kesäkuu', 'july': 'heinäkuu', 'august': 'elokuu', 'september': 'syyskuu',
                   'october': 'lokakuu', 'november': 'marraskuu', 'december': 'joulukuu'}
 
-        context = super().get_context_data(**kwargs)
         place = self.get_object()
 
         best_time_to_visit = place['available_time'].split(', ')

@@ -6,6 +6,7 @@ from decimal import Decimal
 from collections import defaultdict
 
 from django.core.files.base import ContentFile
+from django.db.models.functions import Collate
 from dotenv import load_dotenv
 
 from django.http import JsonResponse
@@ -193,11 +194,13 @@ class DataFromDataHub:
 def get_cities_and_places(filter_data=None):
     lang = get_language()
     if lang == 'en':
-        places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image',
-                                                               'available_time').order_by('city', 'name_eng')
+        places_data = (Place.objects.filter(filter_data).values('id', 'city', 'name_eng', 'image',
+                                                                'available_time').order_by(Collate("city", "fi-x-icu"),
+                                                                                           'name_eng'))
     elif lang == 'fi':
         places_data = Place.objects.filter(filter_data).values('id', 'city', 'name_fin', 'image',
-                                                               'available_time').order_by('city', 'name_fin')
+                                                               'available_time').order_by(Collate("city", "fi-x-icu"),
+                                                                                          'name_fin')
     else:
         places_data = {}
     cities_and_places = defaultdict(list)

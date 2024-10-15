@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated docker compose, updated city getter in the form, updated markup">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +89,11 @@
       <recent name="$PROJECT_DIR$/places" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/places/дд" />
+      <recent name="$PROJECT_DIR$/static/places" />
       <recent name="$PROJECT_DIR$/media/images" />
       <recent name="$PROJECT_DIR$/places" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates/places" />
-      <recent name="$PROJECT_DIR$/static/places/css" />
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">
@@ -202,7 +205,7 @@
       <workItem from="1726730309031" duration="306101000" />
       <workItem from="1728487491919" duration="7223000" />
       <workItem from="1728573362806" duration="76207000" />
-      <workItem from="1728913855459" duration="13367000" />
+      <workItem from="1728913855459" duration="20237000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -404,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728932030413</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="updated docker compose, updated city getter in the form, updated markup">
+      <option name="closed" value="true" />
+      <created>1728932133510</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1728932133510</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
