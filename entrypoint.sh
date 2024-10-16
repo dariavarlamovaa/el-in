@@ -14,4 +14,7 @@ fi
 python manage.py migrate
 python manage.py collectstatic --no-input --clear
 
+echo "Container finnhike_web is running, inserting data..."
+python manage.py insert_data
+
 exec "$@"
