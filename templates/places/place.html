@@ -115,14 +115,13 @@
     }).addTo(map);
 
     // Jawg layer
-    var Jawg_Dark = L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
-        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        minZoom: 0,
-        maxZoom: 22,
-        accessToken: 'SsGvI1cBUlx6m7qrBwvGWFABDoxJ0sVm4qN7oB1eHlDuTgAA1BfDvF05lMuRkQgs'
+    var CartoDB_Dark_Matter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
     });
 
-    Jawg_Dark.addTo(map)
+    CartoDB_Dark_Matter.addTo(map)
 
     var singleMarker = L.marker([latitude, longitude], {icon: myIcon}).addTo(map)
     var popup = singleMarker.bindPopup("{{ name }}").openPopup()
