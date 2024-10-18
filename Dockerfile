@@ -13,11 +13,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app/
 
-COPY requirements.txt .
+COPY requirements/dev.txt requirements/prod.txt ./
 
-RUN python -m pip install --upgrade pip --no-warn-script-location
-
-RUN pip install -r requirements.txt --no-cache-dir --no-warn-script-location
+RUN python -m pip install --upgrade pip --no-warn-script-location && \
+    pip install -r dev.txt --no-cache-dir --no-warn-script-location && \
+    pip install -r prod.txt --no-cache-dir --no-warn-script-location
 
 COPY . .
 

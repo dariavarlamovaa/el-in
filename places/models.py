@@ -25,4 +25,4 @@ class Place(models.Model):
         return self.name_eng or self.name_fin
 
     def __str__(self):
-        return self.city
+        return self.name_eng

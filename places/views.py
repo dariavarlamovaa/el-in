@@ -92,8 +92,7 @@ class HikingPlaceView(DetailView):
 
         context.update(
             {'place': place, 'image': image, 'available_time': available_time, 'weather_parameter': weather_parameter,
-             'name': name,
-             'description': description_list, 'latitude': latitude, 'longitude': longitude, 'temp': temp,
+             'name': name, 'description': description_list, 'latitude': latitude, 'longitude': longitude, 'temp': temp,
              'icon_path': icon_path})
         return context
 

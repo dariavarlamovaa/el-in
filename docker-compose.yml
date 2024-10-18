@@ -14,15 +14,33 @@ services:
 
   finnhike_web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn finnhike.wsgi:application --bind 0.0.0.0:8000
     depends_on:
       - db
+    volumes:
+      - ./static_volume:/app/static
+      - ./media_volume:/app/media
     container_name: finnhike_web
     env_file: .env
     ports:
       - 8000:8000
     links:
       - db
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ./static_volume:/static
+      - ./media_volume:/media
+    ports:
+      - "80:80"
+    depends_on:
+      - finnhike_web
+    links:
+      - finnhike_web
+
 
 volumes:
   postgres_data: {}
+  static_volume:
+  media_volume:
