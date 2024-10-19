@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY_APP")
 
@@ -23,5 +23,3 @@ DATABASES = {
         'HOST': f'{os.getenv("POSTGRES_HOST")}',
     }
 }
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'

@@ -22,6 +22,8 @@ services:
       - ./media_volume:/app/media
     container_name: finnhike_web
     env_file: .env
+    environment:
+      - FINHIKE=prod
     ports:
       - 8000:8000
     links:
