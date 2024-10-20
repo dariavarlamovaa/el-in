@@ -13,7 +13,7 @@ from django.http import JsonResponse
 from django.db.models import Q
 from django.utils.translation import get_language
 
-from finnhike import settings
+from django.conf import settings
 from places.models import Place
 
 load_dotenv()

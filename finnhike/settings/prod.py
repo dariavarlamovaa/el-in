@@ -1,17 +1,10 @@
-import os
-from pathlib import Path
-
-from dotenv import load_dotenv
-
-load_dotenv()
-
-BASE_DIR = Path(__file__).resolve().parent.parent
+from .base import *
 
 SECRET_KEY = os.getenv("SECRET_KEY_APP")
 
 DEBUG = bool(int(os.getenv("DEBUG")))
 
-ALLOWED_HOSTS = list(os.getenv("ALLOWED_HOSTS"))
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 DATABASES = {
     'default': {

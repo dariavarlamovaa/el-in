@@ -1,6 +1,6 @@
+from django.conf import settings
 from django.views.generic import ListView, DetailView, TemplateView
 
-from finnhike import settings
 from .forms import PlaceSelectorForm
 from .models import Place
 from .services import WeatherAPI, filter_cities_places, get_places_for_main_map
