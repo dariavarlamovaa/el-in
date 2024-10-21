@@ -11,6 +11,8 @@ services:
       - POSTGRES_DB=${POSTGRES_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - finnhike_net
 
   finnhike_web:
     build: .
@@ -25,24 +27,32 @@ services:
     environment:
       - FINHIKE=prod
     ports:
-      - 8000:8000
+      - "8000:8000"
     links:
       - db
+    networks:
+      - finnhike_net
+
   nginx:
     image: nginx:latest
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf
-      - static_volume:/static
-      - media_volume:/media
+      - static_volume:/var/www/static
+      - media_volume:/var/www/media
     ports:
-      - "80:80"
+      - "80:8080"
     depends_on:
       - finnhike_web
     links:
       - finnhike_web
+    networks:
+      - finnhike_net
 
 
 volumes:
   postgres_data: {}
   static_volume: {}
   media_volume: {}
+
+networks:
+  finnhike_net:
