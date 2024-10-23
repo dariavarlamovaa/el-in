@@ -16,3 +16,5 @@ DATABASES = {
         'HOST': f'{os.getenv("POSTGRES_HOST")}',
     }
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://finnhike.com', 'https://127.0.0.1']
