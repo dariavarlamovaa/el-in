@@ -4,228 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="added media folder, updated docker compose">
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated media folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finnhike/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/finnhike/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/00387fb0-bf47-11ee-9708-695c0e6a6975.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/020c9100-93e3-11ec-9e6e-cd72eacf1e96-pyhajoki_koskipark_board_walk_photo_tiina_tiirola_80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0216bdd0-6af5-11ed-8b5d-750472ef9a58.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/02a7a200-4de6-11ec-a95c-cfaccc6e09a0-Vierumaki_jarvi_Lemmenharjun-luontopolku_syksy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/05f9f730-b1dd-11ed-9920-61ca39c2fac5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/09bdd9c0-9ebc-11ec-845a-2529846aeb6c-Haukkavuori_puukyltti_1350x900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0a369c80-3b01-11ec-abec-87662808d28d-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0a4c6aa0-4787-11ec-9e12-174a6164c79c-Päijätsalo_nakotorni01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0b4cf1a0-a78e-11ed-bea9-0fed8354dabd.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0b4cf1a0-a78e-11ed-bea9-0fed8354dabd_3rc7p6u.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0bce64a0-5399-11ec-a357-6dfa3769be7b-20190926-DJI_0028-4-medium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0c472410-0f07-11ed-9634-773bf8989335.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/0e1d3280-1414-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/112029a0-326c-11ec-abec-87662808d28d-anttola-melonta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/11832e90-26a2-11ec-8e7c-631d1a898626-Urpola_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/11832e90-26a2-11ec-8e7c-631d1a898626-Urpola_2_clxT14b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/11ed32f0-0107-11ed-a1f2-5fbd0281da4e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/11ed32f0-0107-11ed-a1f2-5fbd0281da4e_hre90XK.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/127cbb10-96ea-11eb-b1a5-c7d98c153924-Kukastunturin_polkaisu_maastopyorailija_tunturin_huipulla_Pallastunturit_RamiValonen-Metsahallitus_srgb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/144b8de0-93f1-11ec-9e6e-cd72eacf1e96-Rokansaari_pääkuva_DSC_0016_2__kopio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1518a6a0-6d49-11ec-b7f1-357f8849a873-Paljakka-Hepokongas-summer-Waterfall-IMG_1641-HR.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/179ba350-a444-11ec-99d9-e17a43844c65-Rantaraitti_lakeshorepath_City_of_Jyväskylä_photo_Tero_Takalo-Eskola.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1c87cec0-54b9-11ef-8042-218003b0b118.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1d057940-5e86-11ed-9d9c-2ddc96e1236d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1d057940-5e86-11ed-9d9c-2ddc96e1236d_W6hsA1l.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1d77baa0-94b5-11ec-9e6e-cd72eacf1e96-IMG_7777.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1d77baa0-94b5-11ec-9e6e-cd72eacf1e96-IMG_7777_PK1rI2a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1f97f110-5c16-11ec-958a-e368ec3fe4d5-_MGL4636.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1fc54ff0-74ff-11ec-90a2-458adb631f40-IMG_0486.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/1fd63030-ec46-11ed-8225-2341bac177e9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2073a230-539e-11ec-a357-6dfa3769be7b-GOPR8369-medium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/21929d70-5f28-11ec-958a-e368ec3fe4d5-Kustaanmiekka_cannons_summer_Aino_Heininen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2275dc20-ec58-11ed-8225-2341bac177e9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2275dc20-ec58-11ed-8225-2341bac177e9_ABe24zg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/22a62e60-b1d5-11ed-9920-61ca39c2fac5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/23bd7170-c61a-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/24ba54b0-67b7-11ec-91fb-3b444fc9a7da-F_Kustaa-hirven_luontopolku_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/25db2bc0-9bb1-11ec-8438-35481556b663-Aavasaksa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/28a65610-e7d6-11ec-9905-89190dd55440.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/297f6bb0-af7e-11ed-9920-61ca39c2fac5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2b3cc300-3269-11ec-abec-87662808d28d-saynatin_retkeilyreitti.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2b402a80-7a4d-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2b84a8b0-4776-11ec-9e12-174a6164c79c-Lakeland_Drone_Kelvenne2_someres.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2d8d4350-20fd-11ec-a48c-7fa23367db73-Lakeland_Drone_Pulkkilanharju2_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2e4fd790-3236-11ec-abec-87662808d28d-2019_09_27_98-10-medium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2ffd8e80-6b2d-11ed-8b5d-750472ef9a58.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/2ffd8e80-6b2d-11ed-8b5d-750472ef9a58_nVPeNYy.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/31ea7030-d0f7-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/34a482c0-51e5-11ec-ae70-f70f11991cb8-teerivaara2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/39055730-7397-11ec-90a2-458adb631f40-IMG_0432.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/39bec870-a9d7-11ec-bed8-b56092421756-original-lapland-everstin-piilo-näköalapolku-pello-juoksenki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3a13e810-cb1c-11ee-a6ae-11eb26ccfaa7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3b9476a0-5413-11ec-a357-6dfa3769be7b-Eeron_polun_retki_17.12.2020_-_026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3ccf8470-80b9-11eb-aa30-d19dac757ee6-ivalo-lapland-midnight-sun-ism-irina-salomaa-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3d0fb0a0-8355-11ec-a8e8-c15af5683442-harju_rinne.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3d0fb0a0-8355-11ec-a8e8-c15af5683442-harju_rinne_gLI3p0g.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3e442740-8df2-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3e442740-8df2-11ee-9fca-6fdb01d69922_rgyWOfn.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/3fa4ce80-5e76-11ec-958a-e368ec3fe4d5-Gumnäs_friluftsled.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/42aee220-aa91-11ec-90ae-933aece5fd99-KehaVihrea109.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/43a819f0-4b80-11ec-aca6-2f1f7dce497f-aurinko-ilvesreitti-aurinkovuori_maiseman_katselu-eetulinnankivi_29673489805_o.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/43edd520-7a4b-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/472533b0-a8ff-11ec-bed8-b56092421756-Visit_Tampere_Maatialanharju_forest_Nokia_family_fun_Laura_Vanzo-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/4a5d83f0-1417-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/4c048aa0-3bdd-11ec-abec-87662808d28d-Valmarinniemi-järvimaisema.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/4db84190-b651-11ec-ad98-4b66ebce974e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/50206b20-e2a0-11ed-99e2-5bfb412d37db.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/50206b20-e2a0-11ed-99e2-5bfb412d37db_oteMlwQ.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/50d68990-cf60-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/51f49c80-4794-11ec-9e12-174a6164c79c-Kammiovuori_Kuva_JMPeitso-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/521350b0-72d9-11ec-90a2-458adb631f40-Maupertuis_062019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/521408c0-3bca-11ec-abec-87662808d28d-rapolanharju_nakoalatasanne_talvella_valkeakosken_kaupunki_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/549ceb20-cf86-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/56123700-c9e9-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/5644b240-8b2b-11ec-9e6e-cd72eacf1e96-Linnamäki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/56982980-6409-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/573e7ac0-421d-11ec-abec-87662808d28d-Vesterby.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/575a2e00-41fa-11ec-abec-87662808d28d-Dagmar.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/58f1aad0-cf7c-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/5cfed050-3bdc-11ec-abec-87662808d28d-vallonjarven_luontopolku_valkeakoski_lapset_ja_koira_lintutorni.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/5d055a90-7a48-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/612eafe0-d512-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/62689920-745f-11ec-90a2-458adb631f40-pienennetty_dsc1878-edit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/62c09a50-d4ed-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/67ca1570-b1d9-11ed-9920-61ca39c2fac5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/68d17090-20f7-11ec-a48c-7fa23367db73-Totovaaran_tahystys_Vasalaki_retkeilijat_Yllastunturit_Kesankitunturi_RamiValonen_Metsahallitus_16x9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/6a84c700-b98c-11ed-a101-0d79684aa620.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/6b735cc0-c618-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/709c76a0-8266-11ec-a8e8-c15af5683442-haikolantalo23.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/717225a0-485c-11ec-a5c0-6d3d53d8ee7a-Pirunkirkko.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/723a6230-a041-11ec-845a-2529846aeb6c-hiastinhaara-lähtöpiste.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/73d6b410-8037-11ec-975b-43ddd48952e8-Vanha_Isosilta_pyhajoki_kuva_tiina_tiirola.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/742ce7a0-5902-11ed-9d9c-2ddc96e1236d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/757faf80-724b-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/757faf80-724b-11ee-9fca-6fdb01d69922_Wu6UFvy.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/777c8190-5e6c-11ec-958a-e368ec3fe4d5-gästbryggan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/78e12390-fbbf-11ee-95fa-33f7dd2e7fc6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/78e12390-fbbf-11ee-95fa-33f7dd2e7fc6_5qD6LpK.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7a482180-7461-11ec-90a2-458adb631f40-pienennetty_dsc2041-edit-edit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7a9b0440-828a-11ec-a8e8-c15af5683442-Jylhänkoski_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7bb34290-4eb7-11ec-a95c-cfaccc6e09a0-Kopio_tiedostosta_Pyha_Pictures-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7c39e890-bfd2-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7de15c20-80b1-11eb-aa30-d19dac757ee6-Otsamoivalotrek-6214_2_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/7ee1a3f0-c5fc-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/809415c0-2ba9-11ee-9fb4-c344224e6fd0.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/80c2a4d0-c48f-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/812c5da0-c604-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/86b5a3a0-1817-11ef-85ed-1573cbf99e75.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/87a3a180-6d4d-11ec-b7f1-357f8849a873-Paljakka-Hiking-IMG_1667-HR.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/88671d20-94a0-11ec-9e6e-cd72eacf1e96-Letonniemi_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/895c5bb0-7f86-11ed-966e-1d832acf86e6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/895c5bb0-7f86-11ed-966e-1d832acf86e6_ZZLIDfD.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8ad657e0-6e1e-11ec-90a2-458adb631f40-P1460509.MP4.00_04_29_44.Still005-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8bbde4a0-c5f5-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8dda7e50-1406-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8e14d450-c5f2-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8e6f6770-b58b-11ec-86e0-0d834b2f6612.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8ead5540-d2f8-11ed-8ed8-859d0a6307f5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/8ead5540-d2f8-11ed-8ed8-859d0a6307f5_xV8KO9U.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9165c400-7464-11ec-90a2-458adb631f40-pienennetty_IMG_0763.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/91793e60-a3ab-11ec-99d9-e17a43844c65-SoivaMetsä_instrument1_Suomussalmi_keski.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/96c4df20-0b5e-11ee-ade7-6f23fa647532.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/987063d0-1542-11ec-bfe3-f7442be962e4-IMG_1575.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9889bd00-d5c5-11ec-948c-7f4254888366.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9889bd00-d5c5-11ec-948c-7f4254888366_RuPHF9p.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/98b65df0-3c88-11ec-abec-87662808d28d-pappilanniemen_luontopolku.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9a00b140-ec9d-11ec-bbba-17559ec1e5eb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9cdb3490-96e9-11eb-b1a5-c7d98c153924-yllas-kesa-bike-park-sekvenssi-gondoli-16x9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/9cf51220-93f5-11ec-9e6e-cd72eacf1e96-150527_Varjakka_Paloasema_09_A4KOKO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a0aa3170-6fdc-11ed-8b5d-750472ef9a58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a0aa3170-6fdc-11ed-8b5d-750472ef9a58_WGxyFwK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a0bda420-12ef-11ed-9634-773bf8989335.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a0e438e0-6bd9-11ed-8b5d-750472ef9a58.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a0e438e0-6bd9-11ed-8b5d-750472ef9a58_xfChC0x.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a10b9070-4b96-11ec-aca6-2f1f7dce497f-paijanne-ilves-nakotorni-eetulinnankivi_29677761095_o.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a245f220-cfa1-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a3dad7f0-4873-11ec-a5c0-6d3d53d8ee7a-juustopolku-evastauko_korvenlampi_laavu_2-eetulinnankivi_29597902821_o.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a5048140-b27f-11ed-9920-61ca39c2fac5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a5d79880-10e1-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a795a450-aa8f-11ec-90ae-933aece5fd99-Venesatamaa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a82eb0b0-58e5-11ec-9ba4-0dc52985e5d5-Vuohensaaren_auringonlasku.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a88bf3f0-96ea-11eb-b1a5-c7d98c153924-Pirunkurun_ponnistus_Kesankijarvi_Yllastunturi_RamiValonen-Metshallitus_srgb-srgb-16x9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/a88bf3f0-96ea-11eb-b1a5-c7d98c153924-Pirunkurun_ponnistus_Kesankijarvi_Yllastunturi_RamiValonen-Metshallitus_srgb-srgb-16x9_Z4ZYc2I.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ad4fc910-4c4e-11ec-a95c-cfaccc6e09a0-Kapatuosia_maisema_KK.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ad4fc910-4c4e-11ec-a95c-cfaccc6e09a0-Kapatuosia_maisema_KK_Id1rrJ8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ae3ac4b0-08f9-11ee-ade7-6f23fa647532.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ae3ac4b0-08f9-11ee-ade7-6f23fa647532_1RR8WAM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/b21f1d90-52b3-11ec-ae70-f70f11991cb8-untitled_3_of_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/b30a2c20-7529-11ec-90a2-458adb631f40-Pekkatori_raahe_kuva_henri_ylikulju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/b3138cb0-140c-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/b712c130-e411-11ed-99e2-5bfb412d37db.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/b712c130-e411-11ed-99e2-5bfb412d37db_2dzCznp.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ba55e150-80d2-11eb-aa30-d19dac757ee6-Jäniskoski-9629.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ba918c00-bb19-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/baa6e7c0-10f0-11ee-ae18-bdba29974241.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/bb67f2a0-20f9-11ec-a48c-7fa23367db73-yllas_hankikanto_kesankijarvi_kellostapuli_ilmakuva_20180417.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/be9b37f0-bb1a-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/bf1e67d0-a8e9-11ec-bed8-b56092421756-metsasukellus_150820.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c02d6260-4d7b-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c316df70-0370-11ed-89e3-2b845eb38acf.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c316df70-0370-11ed-89e3-2b845eb38acf_TDP8SKo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c330f4a0-7a4d-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c3596c90-7a3f-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c3596c90-7a3f-11ee-9fca-6fdb01d69922_VbSxZ2r.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c3aa31c0-a3c1-11ed-bea9-0fed8354dabd.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c4666ea0-6c7a-11ec-b7f1-357f8849a873-utra1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c54398d0-30dd-11ec-a194-79991d152395-Tulliniemi_kesä_RobinS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c7c1d770-9302-11ec-9e6e-cd72eacf1e96-Lakesideroute-Rantaraitti-Lappeenranta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c8a1b2e0-964a-11ed-95a7-e96820c1f2b7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c8c88e20-c5fc-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c97c0a50-c204-11ec-825e-3f3484795fc5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c9b3e1c0-e29f-11ed-99e2-5bfb412d37db.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/c9b3e1c0-e29f-11ed-99e2-5bfb412d37db_YzypYA9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/cc0e6b50-1e87-11ef-b46b-5fa87bd8c981.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/cc3124e0-7a4c-11ee-9fca-6fdb01d69922.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ce7b93d0-80c5-11eb-aa30-d19dac757ee6-PulmankijärviReijo_Nenonen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/cfe11ca0-80d8-11eb-aa30-d19dac757ee6-lemmenjoki-1-ravadas-7828_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d08ff510-52e0-11ec-ae70-f70f11991cb8-Mathildedalin_ruukkikylä_Yrityssalo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d4079ee0-6c77-11ec-b7f1-357f8849a873-kuhasalo2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d52b6550-12f2-11ed-9634-773bf8989335.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d66e3160-ec99-11ec-93b7-a767635a6519.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d6e09390-d100-11ec-baab-1bce364ca529.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d7150780-93eb-11ec-9e6e-cd72eacf1e96-IMG_6577.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/d8656c10-c60e-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/da1e1290-ed60-11ec-8de8-cd43ee5445ef.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/da1e1290-ed60-11ec-8de8-cd43ee5445ef_Fvgo0xy.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/dcc81bc0-7381-11ec-90a2-458adb631f40-visitmikkeli_kaihunkota_1080x1080.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/dcc81bc0-7381-11ec-90a2-458adb631f40-visitmikkeli_kaihunkota_1080x1080_61dkld8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/dea73ef0-bfd3-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/deb8a340-ec4e-11ed-8225-2341bac177e9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/deb8a340-ec4e-11ed-8225-2341bac177e9_71Y2BrC.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e0a06e20-6a24-11ec-b759-f38a504f5f6e-televisiomaston_kierros-pirunpesa_2-iidahollmen_29634447796_o-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e0d21230-20f6-11ec-a48c-7fa23367db73-Eetu_Linnankivi6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e0f71070-bfd5-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e261ec70-76d6-11ec-90a2-458adb631f40-Sarvikallio_view_2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e2af1710-4dce-11ec-a95c-cfaccc6e09a0-Linnaistensuo-6-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e3bb6280-52a6-11ec-ae70-f70f11991cb8-Talvi_Tvärminne_Högholmen_RobinS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e56d7210-0930-11ef-95fa-33f7dd2e7fc6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/e6a9c250-80d0-11eb-aa30-d19dac757ee6-41_Prospektorin_kaivos-9543.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ea030880-ac4d-11ed-8293-b180f16c14ff.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ea030880-ac4d-11ed-8293-b180f16c14ff_hsE8U1u.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ead599d0-7f49-11ec-975b-43ddd48952e8-IMG_8389_-_Björkö.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/eb7d3460-d2b8-11ed-8ed8-859d0a6307f5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/eb7d3460-d2b8-11ed-8ed8-859d0a6307f5_JfNC8Pp.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ecf34580-ab42-11ec-92f8-21c4c44092d5-Linnoitus_1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ef1287c0-2034-11ec-81fc-5f92c27ae658-Aulangon_huvimaja.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/ef1287c0-2034-11ec-81fc-5f92c27ae658-Aulangon_huvimaja_7LFXwLu.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f2c45330-bb16-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f54b1550-8b17-11ec-9e6e-cd72eacf1e96-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f7ae0820-4c38-11ec-a95c-cfaccc6e09a0-Hartola_Kuninkaanpolku_syksy_suomaisema.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f7d1b4b0-7464-11ec-90a2-458adb631f40-Sinivuoren_retkipolku.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f85382e0-94a5-11ec-9e6e-cd72eacf1e96-Pilpasuo_2_muokattu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/f9beaf00-5f18-11ec-958a-e368ec3fe4d5-IMG_5634.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/fac05320-c487-11ec-aa5f-df77bb4864a3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/fd606080-bb12-11ec-8dbc-bd98fe95bcdb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/fdf154e0-ec4a-11ed-8225-2341bac177e9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/fdf154e0-ec4a-11ed-8225-2341bac177e9_XzPBh1H.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/febde070-ed61-11ec-8de8-cd43ee5445ef.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/places/febde070-ed61-11ec-8de8-cd43ee5445ef_69VrmiB.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,7 +202,7 @@
       <workItem from="1726730309031" duration="306101000" />
       <workItem from="1728487491919" duration="7223000" />
       <workItem from="1728573362806" duration="76207000" />
-      <workItem from="1728913855459" duration="117141000" />
+      <workItem from="1728913855459" duration="118506000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -712,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729707253884</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="updated media folder">
+      <option name="closed" value="true" />
+      <created>1729708704696</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1729708704696</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added markup and styles for language switcher; updated model, updated queryset, updated page title" />
     <MESSAGE value="added language switcher, translations, logic for model, updated home page images, added links to them, updated services, updated markup due to multilanguage" />
     <MESSAGE value="added Leaflet map, updated translations, updated styles and markups" />
     <MESSAGE value="added map url, styles, markup; updated icon on map, updated map location, deleted bottom line on map" />
@@ -759,7 +546,8 @@
     <MESSAGE value="updated docker compose and entrypoint script" />
     <MESSAGE value="updated prod settings, added docker ignore" />
     <MESSAGE value="added media folder, updated docker compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="added media folder, updated docker compose" />
+    <MESSAGE value="updated media folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated media folder" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
@@ -769,6 +557,6 @@
     <SUITE FILE_PATH="coverage/finnhike$settings.coverage" NAME="settings Coverage Results" MODIFIED="1726925515828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finnhike" />
     <SUITE FILE_PATH="coverage/finnhike$services.coverage" NAME="services Coverage Results" MODIFIED="1728836269142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
     <SUITE FILE_PATH="coverage/finnhike$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1726926738162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/venv/lib/python3.11/site-packages/django/conf" />
-    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1729708523845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1729708631341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
