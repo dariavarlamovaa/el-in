@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated docker compose and entrypoint script">
-      <change beforePath="$PROJECT_DIR$/.idea/finnhike.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/finnhike.iml" afterDir="false" />
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated prod settings, added docker ignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finnhike/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/finnhike/settings/prod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,7 @@
       <workItem from="1726730309031" duration="306101000" />
       <workItem from="1728487491919" duration="7223000" />
       <workItem from="1728573362806" duration="76207000" />
-      <workItem from="1728913855459" duration="105467000" />
+      <workItem from="1728913855459" duration="115750000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -478,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729624999119</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="updated prod settings, added docker ignore">
+      <option name="closed" value="true" />
+      <created>1729692752549</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1729692752549</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added icons, added class for getting current weather, modified function based to class based getting and saving data from DataHub, updated place mark up" />
     <MESSAGE value="added splitter for description, updated accent color, updated styles for place, updated weather api markup" />
     <MESSAGE value="added markup and styles for language switcher; updated model, updated queryset, updated page title" />
     <MESSAGE value="added language switcher, translations, logic for model, updated home page images, added links to them, updated services, updated markup due to multilanguage" />
@@ -525,7 +531,8 @@
     <MESSAGE value="updated nginx config, asgi,settings, prod" />
     <MESSAGE value="updated nginx config, updated one main picture markup, updated docker compose" />
     <MESSAGE value="updated docker compose and entrypoint script" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docker compose and entrypoint script" />
+    <MESSAGE value="updated prod settings, added docker ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated prod settings, added docker ignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
