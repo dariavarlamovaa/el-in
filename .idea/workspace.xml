@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated media folder">
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated wsgi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.po" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +206,7 @@
       <workItem from="1726730309031" duration="306101000" />
       <workItem from="1728487491919" duration="7223000" />
       <workItem from="1728573362806" duration="76207000" />
-      <workItem from="1728913855459" duration="118506000" />
+      <workItem from="1728913855459" duration="124628000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -500,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729708704696</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="updated wsgi">
+      <option name="closed" value="true" />
+      <created>1729710162708</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1729710162708</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added language switcher, translations, logic for model, updated home page images, added links to them, updated services, updated markup due to multilanguage" />
     <MESSAGE value="added Leaflet map, updated translations, updated styles and markups" />
     <MESSAGE value="added map url, styles, markup; updated icon on map, updated map location, deleted bottom line on map" />
     <MESSAGE value="added all markers to the main map; added styles and markyp for the popup of each place; added new place icon; updated base and place markups, updated get_cities_and_places function" />
@@ -547,7 +558,8 @@
     <MESSAGE value="updated prod settings, added docker ignore" />
     <MESSAGE value="added media folder, updated docker compose" />
     <MESSAGE value="updated media folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated media folder" />
+    <MESSAGE value="updated wsgi" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated wsgi" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />

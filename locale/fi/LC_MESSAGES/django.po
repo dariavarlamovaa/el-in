@@ -90,86 +90,90 @@ msgstr "Siirry"
 msgid "Url"
 msgstr "Linkki"
 
+#: finnhike/templates/places/place.html.py:69
+msgid "Best time to visit"
+msgstr "Paras aika vierailla"
+
 #: finnhike/templates/places/hiking_tips.html.py:15
 msgid "Hiking Tips in Finland"
 msgstr "Retkeilyvinkkejä Suomessa"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:17
 msgid "Weather & Clothing"
 msgstr "Sää & vaatetus"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:19
 msgid "1. Layer Your Clothing"
 msgstr "1. Kerrospukeutuminen"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:20
 msgid "The weather in Finland can change quickly, so it’s best to wear layers. Merino wool and a waterproof jacket are ideal."
 msgstr "Suomen sää voi muuttua nopeasti, joten kannattaa pukeutua kerroksittain. Merinovilla ja vedenpitävä takki ovat ihanteellisia."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:23
 msgid "2. Waterproof Footwear"
 msgstr "2. Vedenpitävät jalkineet"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:24
 msgid "Trails can get wet and muddy, so waterproof boots will keep your feet dry and comfortable."
 msgstr "Polut voivat olla märkiä ja mutaisia, joten vedenpitävät kengät pitävät jalkasi kuivina ja mukavina."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:28
 msgid "Safety & Navigation"
 msgstr "Turvallisuus ja navigointi"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:30
 msgid "1. Use Offline Maps"
 msgstr "1. Käytä offline-karttoja"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:31
 msgid "Mobile reception can be unreliable in remote areas. Download offline maps to ensure you stay on the right track."
 msgstr "Mobiilivastaanotto voi olla epäluotettava syrjäisillä alueilla. Lataa offline-karttoja varmistaaksesi, että pysyt oikealla tiellä."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:34
 msgid "2. Carry a Compass"
 msgstr "2. Kanna mukanasi kompassia"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:35
 msgid "In addition to maps, bring a compass, especially if you’re hiking in more isolated parts of Finland."
 msgstr "Ota karttojen lisäksi mukaan kompassi, varsinkin jos vaellat Suomen syrjäisemmissä osissa."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:39
 msgid "Respecting Nature"
 msgstr "Luonnon kunnioittaminen"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:41
 msgid "1. Everyman’s Right"
 msgstr "1. Jokamiehen oikeus"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:42
 msgid "You have the right to roam in Finland, but it’s important to respect nature by leaving no trace and avoiding littering."
 msgstr "Suomessa on oikeus liikkua, mutta on tärkeää kunnioittaa luontoa jättämällä jälkiä ja välttämällä roskaamista."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:45
 msgid "2. Wildlife Awareness"
 msgstr "2. Tietoisuus villieläimistä"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:46
 msgid "Be mindful of local wildlife, especially in national parks. Keep a safe distance and avoid feeding animals."
 msgstr "Huomioi paikalliset villieläimet erityisesti kansallispuistoissa. Pidä turvallinen etäisyys ja vältä eläinten ruokkimista."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:50
 msgid "Essentials to Bring"
 msgstr "Mukaan otettavat tarvikkeet"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:52
 msgid "1. Snacks & Water"
 msgstr "1. Välipalat ja vesi"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:53
 msgid "Carry enough food and water for your hike, especially if you’re in a remote area with no facilities."
 msgstr "Pidä mukanasi riittävästi ruokaa ja vettä vaellusta varten, varsinkin jos olet syrjäisellä alueella, jossa ei ole mukavuuksia."
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:56
 msgid "2. First-Aid Kit"
 msgstr "2. Ensiapupakkaus"
 
-#: finnhike/templates/places/hiking_tips.html.py:65
+#: finnhike/templates/places/hiking_tips.html.py:57
 msgid "A basic first-aid kit is essential for treating minor injuries or discomforts while hiking."
 msgstr "Perus ensiapupakkaus on välttämätön pienten vammojen tai epämukavuuksien hoitamiseksi vaelluksen aikana."
