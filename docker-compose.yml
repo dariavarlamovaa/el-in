@@ -1,7 +1,7 @@
 services:
   finnhike_web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn finnhike.wsgi:application --bind finnhike.com:8000
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
