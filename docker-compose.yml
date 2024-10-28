@@ -1,14 +1,12 @@
 services:
   finnhike_web:
     build: .
-    command: gunicorn finnhike.wsgi:application --bind finnhike.com:8000
+    command: gunicorn finnhike.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
     container_name: finnhike_web
     env_file: .env
-    environment:
-      - FINHIKE=prod
     ports:
       - "8000:8000"
     networks:
