@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="added gunicorn command, updated production settings, updated nginx configuration, updated development settings">
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated production settings, updated nginx configuration, updated docker settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finnhike/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/finnhike/settings/prod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/fi/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/places/hiking_tips.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/places/hiking_tips.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +206,7 @@
       <workItem from="1726730309031" duration="306101000" />
       <workItem from="1728487491919" duration="7223000" />
       <workItem from="1728573362806" duration="76207000" />
-      <workItem from="1728913855459" duration="152179000" />
+      <workItem from="1728913855459" duration="164679000" />
     </task>
     <task id="LOCAL-00001" summary="added token getter">
       <option name="closed" value="true" />
@@ -527,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730040482960</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="updated production settings, updated nginx configuration, updated docker settings">
+      <option name="closed" value="true" />
+      <created>1730122633599</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1730122633599</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added all markers to the main map; added styles and markyp for the popup of each place; added new place icon; updated base and place markups, updated get_cities_and_places function" />
     <MESSAGE value="added marker cluster; updated place page styles, updated logo color; updated map page styles" />
     <MESSAGE value="added media queries, added burger-menu" />
     <MESSAGE value="added media queries for burger menu, home page; updated styles" />
@@ -574,7 +582,8 @@
     <MESSAGE value="updated wsgi" />
     <MESSAGE value="updated locale folder, updated docker and docker compose" />
     <MESSAGE value="added gunicorn command, updated production settings, updated nginx configuration, updated development settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gunicorn command, updated production settings, updated nginx configuration, updated development settings" />
+    <MESSAGE value="updated production settings, updated nginx configuration, updated docker settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated production settings, updated nginx configuration, updated docker settings" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />

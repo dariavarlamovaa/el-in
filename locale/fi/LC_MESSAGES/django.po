@@ -61,7 +61,6 @@ msgstr "Patikoi"
 msgid "No places found with these filters"
 msgstr "Näillä suodattimilla ei löytynyt paikkoja"
 
-
 #: finnhike/templates/places/places.html.py:44
 msgid "Come on, try again"
 msgstr "Yritä uudelleen"
