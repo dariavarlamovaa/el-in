@@ -1,6 +1,6 @@
 # App for hiking in Finland 🇫🇮
 
-## Try it here - https://finnhike.com/fi/
+## Try it here - https://finnhike.com/en/
 
 ### Built with
 - Django
