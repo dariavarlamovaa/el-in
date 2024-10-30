@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+    .leaflet-popup-content {
+        width: 150px;
+    }
+
+    .popup-image {
+        height: 100px;
+    }
+
+    .popup-name {
+        font-size: 13px;
+    }
+
+    .popup-city {
+        font-size: 11px;
+    }
+}

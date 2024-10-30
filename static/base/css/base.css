@@ -239,3 +239,39 @@ select {
 .search-for-hiking-place-header {
     letter-spacing: 1px;
 }
+
+.show-as {
+    z-index: 100000;
+    position: sticky;
+    bottom: 10px;
+}
+
+.show-as--div {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.show-as--div2 {
+    background-color: #FFF9E3;
+    border-radius: 9999px;
+    max-width: 120px;
+    padding: 10px 20px;
+}
+
+.show-as--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.show-as--link p {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000000;
+}

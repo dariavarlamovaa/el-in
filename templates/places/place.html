@@ -110,9 +110,11 @@
     var map = L.map('map', {attributionControl: false}).setView([latitude, longitude], 5);
 
     // osm layer
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    });
+
+    openStreetMap.addTo(map);
 
     // Jawg layer
     var CartoDB_Dark_Matter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -122,6 +124,18 @@
     });
 
     CartoDB_Dark_Matter.addTo(map)
+
+    const OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    const baseLayers = {
+        'CartoDBLayer': CartoDB_Dark_Matter,
+        'OpenStreetMap_Mapnik': OpenStreetMap_Mapnik,
+    }
+
+    L.control.layers(baseLayers, {}, {}).addTo(map)
 
     var singleMarker = L.marker([latitude, longitude], {icon: myIcon}).addTo(map)
     var popup = singleMarker.bindPopup("{{ name }}").openPopup()

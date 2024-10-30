@@ -52,6 +52,12 @@
             </div>
         </div>
         {% include 'base/selector.html' %}
+        <div class="container">
+            <div class="main-map-page">
+                <a href="{% url 'map' %}">{% trans 'or go to the' %} <span class="main-map-words">{% trans 'map' %}{% trans ' ' %}</span></a>
+                <p class="arrow">—></p>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock content %}

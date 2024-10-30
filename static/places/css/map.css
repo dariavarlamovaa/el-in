@@ -1,5 +1,6 @@
 .full-map {
     padding: 40px 10px;
+    position: relative;
 }
 
 #map {
@@ -61,4 +62,17 @@
 
 .marker-cluster-large {
     background-color: #ad3d3d;
+}
+
+.leaflet-control-scale-line {
+    border: none;
+    padding: 2px 5px 5px;
+    white-space: nowrap;
+    background: none;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+.leaflet-control-scale-line:not(:first-child) {
+    border-top: 1px solid #efefef;
 }

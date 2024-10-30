@@ -49,6 +49,18 @@
             </div>
         </div>
         {% endif %}
+        {% if cities_and_places %}
+        <div class="show-as">
+            <div class="show-as--div">
+                <div class="show-as-list show-as--div2">
+                    <a class="show-as--link" href="{% url 'map' %}">
+                        <img src="{% static 'places/images/map.svg' %}" alt="map">
+                        <p>{% trans 'Map' %}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock content %}

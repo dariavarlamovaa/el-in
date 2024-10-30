@@ -57,6 +57,18 @@ msgstr "Kotisivu"
 msgid "Hike here"
 msgstr "Patikoi"
 
+#: finnhike/templates/home/home.html.py:57
+msgid "or go to the"
+msgstr "tai siirry"
+
+#: finnhike/templates/home/home.html.py:57
+msgid "map"
+msgstr "karta"
+
+#: finnhike/templates/home/home.html.py:18
+msgid " "
+msgstr "lle"
+
 #: finnhike/templates/places/places.html.py:43
 msgid "No places found with these filters"
 msgstr "Näillä suodattimilla ei löytynyt paikkoja"
@@ -64,6 +76,10 @@ msgstr "Näillä suodattimilla ei löytynyt paikkoja"
 #: finnhike/templates/places/places.html.py:44
 msgid "Come on, try again"
 msgstr "Yritä uudelleen"
+
+#: finnhike/templates/places/places.html.py:27
+msgid "List"
+msgstr "Lista"
 
 #: finnhike/templates/places/place.html.py:14
 msgid "All places"
