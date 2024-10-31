@@ -16,16 +16,21 @@ class PlaceSelectorForm(forms.Form):
         ('january', 'Tammikuu'), ('february', 'Helmikuu'), ('march', 'Maaliskuu'), ('april', 'Huhtikuu'),
         ('may', 'Toukokuu'), ('june', 'Kesäkuu'), ('july', 'Heinäkuu'), ('august', 'Elokuu'),
         ('september', 'Syyskuu'), ('october', 'Lokakuu'), ('november', 'Marraskuu'), ('december', 'Joulukuu')]
+    price_eng = [('free', 'Free'), ('paid', 'Paid')]
+    price_fin = [('free', 'Ilmainen'), ('paid', 'Maksullinen')]
     city = forms.ChoiceField(required=False)
     month = forms.ChoiceField(required=False)
+    price = forms.ChoiceField(required=False)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         current_language = get_language()
         if current_language == 'en':
             self.fields['month'].choices = self.months_eng
+            self.fields['price'].choices = self.price_eng
         else:
             self.fields['month'].choices = self.months_fin
+            self.fields['price'].choices = self.price_fin
 
         if 'places_place' in connection.introspection.table_names():
             city_choices = [(city, city) for city in

@@ -78,6 +78,19 @@
     width: 400px;
 }
 
+.leaflet-control-scale-line {
+    border: none;
+    padding: 2px 5px 5px;
+    white-space: nowrap;
+    background: none;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+.leaflet-control-scale-line:not(:first-child) {
+    border-top: 1px solid #efefef;
+}
+
 .place-image-main {
     object-fit: cover;
 }

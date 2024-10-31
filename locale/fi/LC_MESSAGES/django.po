@@ -49,6 +49,10 @@ msgstr "KAUPUNKI"
 msgid "MONTH"
 msgstr "KUUKAUSI"
 
+#: finnhike/templates/base/selector.html.py:19
+msgid "PRICE"
+msgstr "HINTA"
+
 #: finnhike/templates/home/home.html.py:9
 msgid "Home"
 msgstr "Kotisivu"
@@ -91,7 +95,7 @@ msgstr "Ilmainen"
 
 #: finnhike/templates/places/place.html.py:52
 msgid "Paid"
-msgstr "Makullinen"
+msgstr "Maksullinen"
 
 #: finnhike/templates/places/place.html.py:54
 msgid "Price"

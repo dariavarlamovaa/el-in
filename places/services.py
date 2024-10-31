@@ -213,12 +213,14 @@ def get_cities_and_places(filter_data=None):
     return cities_and_places
 
 
-def filter_cities_places(city=None, month=None):
+def filter_cities_places(city=None, month=None, price=None):
     filter_data = Q()
     if city:
         filter_data &= Q(city=city)
     if month:
         filter_data &= Q(available_time__icontains=month)
+    if price:
+        filter_data &= Q(price__icontains=price)
     return get_cities_and_places(filter_data)
 
 

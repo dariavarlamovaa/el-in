@@ -22,6 +22,14 @@
                         {% endfor %}
                     </select>
 
+                    <select type="multichoice" name="price_selector" id="price_selector"
+                            class="price_selector selector-one">
+                        <option selected disabled class="selected-disabled-option">{% trans "PRICE" %}</option>
+                        {% for field in form.price %}
+                        {{ field }}
+                        {% endfor %}
+                    </select>
+
                     <button class="button-selector btn" type="submit"><img src="{% static 'base/images/search.svg' %}"
                                                                            alt="Search">
                     </button>

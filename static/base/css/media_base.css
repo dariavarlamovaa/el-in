@@ -164,11 +164,7 @@
     }
 }
 
-@media screen and (max-width: 690px) {
-    .header-h1 {
-        text-align: center;
-    }
-
+@media screen and (max-width: 880px) {
     .selector-info {
         padding: 20px 0 40px;
     }
@@ -187,16 +183,9 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    .developer-info {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 690px) {
     .header-h1 {
-        font-size: 35px;
+        text-align: center;
     }
 
     .search-line {
@@ -216,5 +205,18 @@
 
     .select-hiking-place {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .developer-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header-h1 {
+        font-size: 35px;
     }
 }

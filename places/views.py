@@ -28,7 +28,8 @@ class PlaceFilter(ListView):
     def get_queryset(self):
         selected_city = self.request.GET.get('city_selector', None)
         selected_month = self.request.GET.get('month_selector', None)
-        cities_and_places = filter_cities_places(selected_city, selected_month)
+        selected_price = self.request.GET.get('price_selector', None)
+        cities_and_places = filter_cities_places(selected_city, selected_month, selected_price)
         return cities_and_places
 
     def get_context_data(self, **kwargs):

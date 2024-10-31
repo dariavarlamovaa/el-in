@@ -136,6 +136,7 @@
     }
 
     L.control.layers(baseLayers, {}, {}).addTo(map)
+    L.control.scale().addTo(map)
 
     var singleMarker = L.marker([latitude, longitude], {icon: myIcon}).addTo(map)
     var popup = singleMarker.bindPopup("{{ name }}").openPopup()
