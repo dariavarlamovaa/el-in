@@ -15,3 +15,28 @@
         font-size: 11px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .leaflet-touch .leaflet-control-layers-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .leaflet-retina .leaflet-control-layers-toggle {
+        background-size: 17px 17px;
+    }
+
+    .search-for-places {
+        top: 13%;
+    }
+
+    #search-input {
+        position: absolute;
+        right: 0;
+        bottom: -35px;
+    }
+
+    #search-img {
+        width: 35px;
+    }
+}

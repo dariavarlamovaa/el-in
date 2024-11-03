@@ -3,7 +3,6 @@ const header = document.querySelector('.header')
 const body = document.querySelector('body')
 
 burgerMenu.addEventListener('click', function () {
-    console.log('hi')
     let menuLang = document.querySelector('.menu-lang')
     let menu = document.querySelector('.menu');
     let languages = document.querySelector('.languages');

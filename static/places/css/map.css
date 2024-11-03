@@ -3,11 +3,40 @@
     position: relative;
 }
 
+.search-for-places {
+    position: absolute;
+    top: 15%;
+    margin-right: 20px;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 10px;
+}
+
+#search-input {
+    background-color: #FFF9E3;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    padding: 5px 7px;
+    display: none;
+    border-radius: 3px;
+}
+
 #map {
     height: 660px;
     width: 100%;
 }
 
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: none;
+}
+
+.leaflet-bar a,
+.leaflet-control-layers {
+    background-color: #FFF9E3;
+}
 
 .leaflet-popup-content-wrapper {
     border-radius: 15px;
