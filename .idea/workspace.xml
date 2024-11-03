@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="moved map script to another js file; added search input script; updated styles and markup of the map">
-      <change beforePath="$PROJECT_DIR$/static/js/search-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/search-input.js" afterDir="false" />
+    <list default="true" id="16febcd3-a7b9-4245-b278-6e75765bbb6c" name="Changes" comment="updated search input script">
+      <change beforePath="$PROJECT_DIR$/places/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/places/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/selector.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/selector.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -564,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730638552450</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="updated search input script">
+      <option name="closed" value="true" />
+      <created>1730638859151</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1730638859151</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added docker files" />
     <MESSAGE value="updated docker files" />
     <MESSAGE value="added requirements, updated docker files and model Place" />
     <MESSAGE value="added script for command, updated docker files" />
@@ -611,7 +620,8 @@
     <MESSAGE value="added new buttons to the map and places pages; updated translations; updated entrypoint; updated styles and markups; updated layers on the maps" />
     <MESSAGE value="added new option for the filter; updated translations; updated markups and styles" />
     <MESSAGE value="moved map script to another js file; added search input script; updated styles and markup of the map" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved map script to another js file; added search input script; updated styles and markup of the map" />
+    <MESSAGE value="updated search input script" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated search input script" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/finnhike$data.coverage" NAME="data Coverage Results" MODIFIED="1726924998725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
@@ -621,6 +631,6 @@
     <SUITE FILE_PATH="coverage/finnhike$settings.coverage" NAME="settings Coverage Results" MODIFIED="1726925515828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finnhike" />
     <SUITE FILE_PATH="coverage/finnhike$services.coverage" NAME="services Coverage Results" MODIFIED="1728836269142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/places" />
     <SUITE FILE_PATH="coverage/finnhike$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1726926738162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/venv/lib/python3.11/site-packages/django/conf" />
-    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1730638803960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/finnhike$manage.coverage" NAME="manage Coverage Results" MODIFIED="1730656791131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
