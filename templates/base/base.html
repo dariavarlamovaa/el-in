@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-<html lang="en">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">

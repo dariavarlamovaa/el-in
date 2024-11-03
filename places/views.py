@@ -7,7 +7,6 @@ from .services import WeatherAPI, filter_cities_places, get_places_for_main_map
 
 
 class PlaceView(ListView):
-    form = PlaceSelectorForm()
     template_name = 'places/places.html'
 
     def get_queryset(self):
@@ -16,14 +15,14 @@ class PlaceView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        form = PlaceSelectorForm(self.request.GET or None)
         cities_and_places = self.get_queryset()
-        context.update({'cities_and_places': cities_and_places, 'form': self.form})
+        context.update({'cities_and_places': cities_and_places, 'form': form})
         return context
 
 
 class PlaceFilter(ListView):
     template_name = 'places/places.html'
-    form = PlaceSelectorForm()
 
     def get_queryset(self):
         selected_city = self.request.GET.get('city_selector', None)
@@ -34,8 +33,9 @@ class PlaceFilter(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        form = PlaceSelectorForm(self.request.GET or None)
         cities_and_places = self.get_queryset()
-        context.update({'cities_and_places': cities_and_places, 'form': self.form})
+        context.update({'cities_and_places': cities_and_places, 'form': form})
         return context
 
 
