@@ -164,7 +164,7 @@
     }
 }
 
-@media screen and (max-width: 880px), screen and (min-height: 901px){
+@media screen and (max-width: 880px) {
     .selector-info {
         padding: 20px 0 40px;
     }
@@ -189,7 +189,7 @@
     }
 }
 
-@media screen and (max-width: 690px), screen and (min-height: 901px) {
+@media screen and (max-width: 690px) {
     .search-line {
         border: 1px solid #585123;
         border-radius: 15px;

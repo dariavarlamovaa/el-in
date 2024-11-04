@@ -48,3 +48,30 @@
         font-size: 3rem;
     }
 }
+
+@media screen and (min-height: 830px) and (min-width: 650px) {
+    .one-picture img {
+        width: 500px;
+        height: 600px;
+    }
+}
+
+@media screen and (min-height: 1035px) and (min-width: 650px){
+    .one-picture img {
+        height: 700px;
+    }
+}
+
+@media screen and (min-height: 1135px) and (min-width: 650px){
+    .one-picture img {
+        height: 800px;
+    }
+}
+
+
+@media screen and (min-height: 1235px) and (min-width: 650px){
+    .one-picture img {
+        height: 900px;
+        width: 700px;
+    }
+}

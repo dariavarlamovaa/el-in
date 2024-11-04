@@ -125,15 +125,6 @@ main {
     cursor: pointer;
 }
 
-.lang-menu:hover .lang-dropdown {
-    display: block;
-}
-
-.lang-menu:hover .selected_language {
-    border-bottom-right-radius: unset;
-    border-bottom-left-radius: unset;
-}
-
 .selected_language {
     max-width: 50px;
     text-align: center;
