@@ -164,7 +164,7 @@
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 880px), screen and (min-height: 901px){
     .selector-info {
         padding: 20px 0 40px;
     }
@@ -187,7 +187,9 @@
     .header-h1 {
         text-align: center;
     }
+}
 
+@media screen and (max-width: 690px), screen and (min-height: 901px) {
     .search-line {
         border: 1px solid #585123;
         border-radius: 15px;
