@@ -27,3 +27,7 @@ https://github.com/dariavarlamovaa/finnhike.git
 
 2. navigate to cloned project
 3. use Docker commands
+```bash
+docker compose -f docker-compose.dev.yml up --build
+```
+4. access the web interface at http://localhost:8000 or http://127.0.0.1:8000
