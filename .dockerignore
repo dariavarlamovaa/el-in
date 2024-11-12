@@ -16,8 +16,6 @@ __pycache__/
 .git
 .gitignore
 
-finnhike/settings/dev.py
-
 *.swp
 *.swo
 *.swn
