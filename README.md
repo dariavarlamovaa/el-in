@@ -1,9 +1,9 @@
-# App for hiking in Finland 🇫🇮
+# App For Hiking In Finland 🇫🇮
  
 Finnhike is a web application dedicated to showcasing hiking spots in Finland. Built with Django, it provides users with an interactive map, filtering capabilities, and detailed information on each hiking place.
 
 
-### Built with
+### Built With
 - Django
 - JavaScript
 - Leaflet
@@ -17,9 +17,10 @@ Finnhike is a web application dedicated to showcasing hiking spots in Finland. B
 
 <hr>
 
-### How to run
+### How To Run
 
 #### You should have:
+
   - Running Docker
 
 1. clone the repository
@@ -33,3 +34,11 @@ https://github.com/dariavarlamovaa/finnhike.git
 docker compose -f docker-compose.dev.yml up --build
 ```
 4. access the web interface at http://localhost:8000 or http://127.0.0.1:8000
+
+
+### Environment Variables
+
+Main configuration is located in files:
+ - `.env.dev`
+ - `.env.example`
+
