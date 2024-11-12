@@ -3,6 +3,8 @@
 Finnhike is a web application dedicated to showcasing hiking spots in Finland. Built with Django, it provides users with an interactive map, filtering capabilities, and detailed information on each hiking place.
 
 
+
+
 ### Built With
 - Django
 - JavaScript
@@ -14,6 +16,12 @@ Finnhike is a web application dedicated to showcasing hiking spots in Finland. B
 - AWS
 
 <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHJwcjAwcGQ2YnMzMGw2NDZod2hnOTI5NHZydDN2aXJnN2k4bmZiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7p0qZOxUe5cIM/giphy.gif" width="300px" />
+
+<hr>
+
+## Preview
+
+![Screenshot](static/base/images/finnhike.png)
 
 <hr>
 
