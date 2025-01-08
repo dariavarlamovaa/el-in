@@ -1,6 +1,6 @@
 # App For Hiking In Finland 🇫🇮
  
-Finnhike is a web application dedicated to showcasing hiking spots in Finland. Built with Django, it provides users with an interactive map, filtering capabilities, and detailed information on each hiking place.
+Finnhike is a website dedicated to showcasing hiking spots in Finland using DataHub(VisitFinland) API data. Built with Django, it provides users with an interactive map, filtering capabilities, and detailed information on each hiking place.
 
 
 
